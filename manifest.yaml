@@ -19,7 +19,7 @@ spec:
         imageDigest: sha256:bf189966564988af80655c2f2eb4acc7f880b465dedb5e9aacaa5b569a87466e
         name: kubeadm-bootstrap-controller
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kubernetes-sigs/cluster-api/kubeadm-bootstrap-controller:v1.2.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kubernetes-sigs/cluster-api/kubeadm-bootstrap-controller:v1.2.0-eks-a-26
       kubeProxy:
         arch:
         - amd64
@@ -28,7 +28,7 @@ spec:
         imageDigest: sha256:172caff0d99616c3c5fc38b8490f061bb8a1c4080ea45e07231e46a30c079209
         name: kube-rbac-proxy
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
       metadata:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api/manifests/bootstrap-kubeadm/v1.2.0/metadata.yaml
       version: v1.2.0+99a3807
@@ -40,7 +40,7 @@ spec:
         imageDigest: sha256:bf56c9712189f5fc65d35544e2a84d3a7a1a2c05f2840fab54c57e8a3f8b57a4
         name: bottlerocket-admin
         os: linux
-        uri: 10.136.0.2:443/bottlerocket/bottlerocket-admin:v0.9.2
+        uri: public.ecr.aws/bottlerocket/bottlerocket-admin:v0.9.2
       control:
         arch:
         - amd64
@@ -48,7 +48,7 @@ spec:
         imageDigest: sha256:a8f8f30ed6bd3f4848cf79d19f6c31d60b9c898649e7ee1d3081dac4a36421a7
         name: bottlerocket-control
         os: linux
-        uri: 10.136.0.2:443/bottlerocket/bottlerocket-control:v0.6.3
+        uri: public.ecr.aws/bottlerocket/bottlerocket-control:v0.6.3
       kubeadmBootstrap:
         arch:
         - amd64
@@ -57,7 +57,7 @@ spec:
         imageDigest: sha256:1036cb53d2892562a0f6352350a7daa833129f5a5e919ce08e2bf4d24f87a3ee
         name: bottlerocket-bootstrap
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/bottlerocket-bootstrap:v1-21-24-eks-a-26
+        uri: 10.136.0.2:5000/eks-anywhere/bottlerocket-bootstrap:v1-21-24-eks-a-26
     certManager:
       acmesolver:
         arch:
@@ -67,7 +67,7 @@ spec:
         imageDigest: sha256:9297f8d98a49ad7b53e49923e84b32adb335268b6c45bbd61d9f8f286f7245b4
         name: cert-manager-acmesolver
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/cert-manager/cert-manager-acmesolver:v1.9.1-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/cert-manager/cert-manager-acmesolver:v1.9.1-eks-a-26
       cainjector:
         arch:
         - amd64
@@ -76,7 +76,7 @@ spec:
         imageDigest: sha256:29a4d7a3ea5a2c030f4448afe46b20acfce9314791dd681db8b09e99bae8fe89
         name: cert-manager-cainjector
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/cert-manager/cert-manager-cainjector:v1.9.1-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/cert-manager/cert-manager-cainjector:v1.9.1-eks-a-26
       controller:
         arch:
         - amd64
@@ -85,7 +85,7 @@ spec:
         imageDigest: sha256:b16b58ee27ea58e36cb49f7615824a2ef8f8c0aa3ed47ebc23d195113d9138dd
         name: cert-manager-controller
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/cert-manager/cert-manager-controller:v1.9.1-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/cert-manager/cert-manager-controller:v1.9.1-eks-a-26
       ctl:
         arch:
         - amd64
@@ -94,7 +94,7 @@ spec:
         imageDigest: sha256:fe7e77437832867a9c8c243aba8c9b8f2c33eccf1a798670fe8a449edc3dfe2e
         name: cert-manager-ctl
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/cert-manager/cert-manager-ctl:v1.9.1-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/cert-manager/cert-manager-ctl:v1.9.1-eks-a-26
       manifest:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cert-manager/manifests/v1.9.1/cert-manager.yaml
       version: v1.9.1+7bb5e2b
@@ -106,7 +106,7 @@ spec:
         imageDigest: sha256:9ece2181eedef5626f7d392f40e9914302868c1f5e5fa91276fdb1558be1c1d5
         name: cert-manager-webhook
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/cert-manager/cert-manager-webhook:v1.9.1-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/cert-manager/cert-manager-webhook:v1.9.1-eks-a-26
     cilium:
       cilium:
         arch:
@@ -115,12 +115,12 @@ spec:
         imageDigest: sha256:197b3706173bffc9563f7211788dfd326a36d1ac99d04c42357f80b7143da0d7
         name: cilium
         os: linux
-        uri: 10.136.0.2:443/isovalent/cilium:v1.11.10-eksa.2
+        uri: public.ecr.aws/isovalent/cilium:v1.11.10-eksa.2
       helmChart:
         description: Helm chart for cilium-chart
         imageDigest: sha256:252241c7986b52a4bec31c50e31daf349374b730dcb8aaa6db3a2b1cb025ff7c
         name: cilium-chart
-        uri: 10.136.0.2:443/isovalent/cilium:1.11.10-eksa.2
+        uri: public.ecr.aws/isovalent/cilium:1.11.10-eksa.2
       manifest:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cilium/manifests/cilium/v1.11.10-eksa.2/cilium.yaml
       operator:
@@ -130,7 +130,7 @@ spec:
         imageDigest: sha256:ec2677f33c9aa9b6a8f600314c718a913eb1f0d0006a991f69ee0a775bb29e14
         name: operator-generic
         os: linux
-        uri: 10.136.0.2:443/isovalent/operator-generic:v1.11.10-eksa.2
+        uri: public.ecr.aws/isovalent/operator-generic:v1.11.10-eksa.2
       version: v1.11.10-eksa.2
     cloudStack:
       clusterAPIController:
@@ -141,7 +141,7 @@ spec:
         imageDigest: sha256:1a31dd9c520d4081a039b275ed75b0a694632d6a83a6e8c3b0caf2e3a78086e2
         name: cluster-api-provider-cloudstack
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kubernetes-sigs/cluster-api-provider-cloudstack/release/manager:v0.4.9-rc4-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kubernetes-sigs/cluster-api-provider-cloudstack/release/manager:v0.4.9-rc4-eks-a-26
       components:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api-provider-cloudstack/manifests/infrastructure-cloudstack/v0.4.9-rc4/infrastructure-components.yaml
       kubeRbacProxy:
@@ -152,7 +152,7 @@ spec:
         imageDigest: sha256:172caff0d99616c3c5fc38b8490f061bb8a1c4080ea45e07231e46a30c079209
         name: kube-rbac-proxy
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
       kubeVip:
         arch:
         - amd64
@@ -161,7 +161,7 @@ spec:
         imageDigest: sha256:48e9c1e6e1ae5a943cccf6def867c67f1b576fc191f4ac757cd007f345b0f4d0
         name: kube-vip
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kube-vip/kube-vip:v0.5.5-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kube-vip/kube-vip:v0.5.5-eks-a-26
       metadata:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api-provider-cloudstack/manifests/infrastructure-cloudstack/v0.4.9-rc4/metadata.yaml
       version: v0.4.9-rc4+fec458f
@@ -176,7 +176,7 @@ spec:
         imageDigest: sha256:1d5d49d6653ca89275b36c3ee23c0c0e0ad908b9db70242d77ab549dd367fd3f
         name: cluster-api-controller
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kubernetes-sigs/cluster-api/cluster-api-controller:v1.2.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kubernetes-sigs/cluster-api/cluster-api-controller:v1.2.0-eks-a-26
       kubeProxy:
         arch:
         - amd64
@@ -185,7 +185,7 @@ spec:
         imageDigest: sha256:172caff0d99616c3c5fc38b8490f061bb8a1c4080ea45e07231e46a30c079209
         name: kube-rbac-proxy
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
       metadata:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api/manifests/cluster-api/v1.2.0/metadata.yaml
       version: v1.2.0+73969a7
@@ -200,7 +200,7 @@ spec:
         imageDigest: sha256:98744ce8a528ee59bea888a5cf27e197aec01022307596e367b8348bae7e34f7
         name: kubeadm-control-plane-controller
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kubernetes-sigs/cluster-api/kubeadm-control-plane-controller:v1.2.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kubernetes-sigs/cluster-api/kubeadm-control-plane-controller:v1.2.0-eks-a-26
       kubeProxy:
         arch:
         - amd64
@@ -209,7 +209,7 @@ spec:
         imageDigest: sha256:172caff0d99616c3c5fc38b8490f061bb8a1c4080ea45e07231e46a30c079209
         name: kube-rbac-proxy
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
       metadata:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api/manifests/control-plane-kubeadm/v1.2.0/metadata.yaml
       version: v1.2.0+5f68de4
@@ -226,7 +226,7 @@ spec:
         imageDigest: sha256:172caff0d99616c3c5fc38b8490f061bb8a1c4080ea45e07231e46a30c079209
         name: kube-rbac-proxy
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
       manager:
         arch:
         - amd64
@@ -235,7 +235,7 @@ spec:
         imageDigest: sha256:64b587d69a0863fdaedfe564d89d76a8e72157d1887d8246d1edaadb8e062b38
         name: cluster-api-provider-docker
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kubernetes-sigs/cluster-api/capd-manager:v1.2.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kubernetes-sigs/cluster-api/capd-manager:v1.2.0-eks-a-26
       metadata:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api/manifests/infrastructure-docker/v1.2.0/metadata.yaml
       version: v1.2.0+af7c54b
@@ -278,7 +278,7 @@ spec:
         imageDigest: sha256:23d8cd3e31831be77a101f45713210a0fe6df34232957708b962a19fe768749b
         name: kind-node
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kubernetes-sigs/kind/node:v1.21.14-eks-d-1-21-24-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kubernetes-sigs/kind/node:v1.21.14-eks-d-1-21-24-eks-a-26
       kubeVersion: v1.21.14
       manifestUrl: https://distro.eks.amazonaws.com/kubernetes-1-21/kubernetes-1-21-eks-24.yaml
       name: kubernetes-1-21-eks-24
@@ -313,7 +313,7 @@ spec:
         imageDigest: sha256:a024605f429ae85c5b0751b3a7929824de7a99477e6134c99677fd614b387f65
         name: eks-anywhere-cli-tools
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/cli-tools:v0.14.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/cli-tools:v0.14.0-eks-a-26
       clusterController:
         arch:
         - amd64
@@ -322,7 +322,7 @@ spec:
         imageDigest: sha256:576c01d68bde60e9ada7bb56bbe2f0f64394c7aac8b2bbb686f974ef63911cf9
         name: eks-anywhere-cluster-controller
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/cluster-controller:v0.14.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/cluster-controller:v0.14.0-eks-a-26
       components:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/eks-anywhere/manifests/cluster-controller/v0.14.0/eksa-components.yaml
       diagnosticCollector:
@@ -333,7 +333,7 @@ spec:
         imageDigest: sha256:7bb784289bf9fe416b7fa9a58ef7f06d97ee0a18b94793aca5a188dee92e3a2f
         name: eks-anywhere-diagnostic-collector
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/diagnostic-collector:v0.14.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/diagnostic-collector:v0.14.0-eks-a-26
       version: v0.14.0+635e2f8
     etcdadmBootstrap:
       components:
@@ -346,7 +346,7 @@ spec:
         imageDigest: sha256:6077295d1a131aa4a96e94b90ed4cfea3e967244fb62daf7e5b10bda8b881aa0
         name: etcdadm-bootstrap-provider
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/aws/etcdadm-bootstrap-provider:v1.0.5-rc3-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/aws/etcdadm-bootstrap-provider:v1.0.5-rc3-eks-a-26
       kubeProxy:
         arch:
         - amd64
@@ -355,7 +355,7 @@ spec:
         imageDigest: sha256:172caff0d99616c3c5fc38b8490f061bb8a1c4080ea45e07231e46a30c079209
         name: kube-rbac-proxy
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
       metadata:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/etcdadm-bootstrap-provider/manifests/bootstrap-etcdadm-bootstrap/v1.0.5-rc3/metadata.yaml
       version: v1.0.5-rc3+e21737f
@@ -370,7 +370,7 @@ spec:
         imageDigest: sha256:c5a65c440d36085674c83305e0ac45879d68793ae81b8ceff85e8832e8193738
         name: etcdadm-controller
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/aws/etcdadm-controller:v1.0.4-rc4-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/aws/etcdadm-controller:v1.0.4-rc4-eks-a-26
       kubeProxy:
         arch:
         - amd64
@@ -379,7 +379,7 @@ spec:
         imageDigest: sha256:172caff0d99616c3c5fc38b8490f061bb8a1c4080ea45e07231e46a30c079209
         name: kube-rbac-proxy
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
       metadata:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/etcdadm-controller/manifests/bootstrap-etcdadm-controller/v1.0.4-rc4/metadata.yaml
       version: v1.0.4-rc4+425d719
@@ -392,7 +392,7 @@ spec:
         imageDigest: sha256:3e09a1c2bfc8d2ac95b610d53d96b0e6ed8aed2ddc8ebec4c06e8a5c632880ad
         name: helm-controller
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/fluxcd/helm-controller:v0.22.2-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/fluxcd/helm-controller:v0.22.2-eks-a-26
       kustomizeController:
         arch:
         - amd64
@@ -401,7 +401,7 @@ spec:
         imageDigest: sha256:efcf4b0dd083c450444172806c1ca606fbe3ad0bd57baaefd812d28fbb347c27
         name: kustomize-controller
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/fluxcd/kustomize-controller:v0.26.3-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/fluxcd/kustomize-controller:v0.26.3-eks-a-26
       notificationController:
         arch:
         - amd64
@@ -410,7 +410,7 @@ spec:
         imageDigest: sha256:448e4bfbf21b8b3d70cf6a61efee2839c364339b7514b56e542e2851789b5b82
         name: notification-controller
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/fluxcd/notification-controller:v0.24.1-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/fluxcd/notification-controller:v0.24.1-eks-a-26
       sourceController:
         arch:
         - amd64
@@ -419,7 +419,7 @@ spec:
         imageDigest: sha256:7fb054a18d0b84b31569293bb7042e693a90cae46f4397d67d4980f95eba5e9f
         name: source-controller
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/fluxcd/source-controller:v0.25.9-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/fluxcd/source-controller:v0.25.9-eks-a-26
       version: v0.31.3+9ff63c4
     haproxy:
       image:
@@ -430,7 +430,7 @@ spec:
         imageDigest: sha256:5d439a352a42cddd11e6b2c9f0a738f1d6dfd962340bd89ed21d4718ef4ac4a4
         name: haproxy
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kubernetes-sigs/kind/haproxy:v0.17.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kubernetes-sigs/kind/haproxy:v0.17.0-eks-a-26
     kindnetd:
       manifest:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/kind/manifests/kindnetd/v0.17.0/kindnetd.yaml
@@ -445,7 +445,7 @@ spec:
         imageDigest: sha256:3399c03825bd7ce2e90e480c2061cc361dc2afc3b00c1bd60a900ce5f47ec338
         name: cluster-api-provider-nutanix
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/nutanix-cloud-native/cluster-api-provider-nutanix:v1.1.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/nutanix-cloud-native/cluster-api-provider-nutanix:v1.1.0-eks-a-26
       clusterTemplate:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api-provider-nutanix/manifests/infrastructure-nutanix/v1.1.0/cluster-template.yaml
       components:
@@ -458,7 +458,7 @@ spec:
         imageDigest: sha256:48e9c1e6e1ae5a943cccf6def867c67f1b576fc191f4ac757cd007f345b0f4d0
         name: kube-vip
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kube-vip/kube-vip:v0.5.5-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kube-vip/kube-vip:v0.5.5-eks-a-26
       metadata:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api-provider-nutanix/manifests/infrastructure-nutanix/v1.1.0/metadata.yaml
       version: v1.1.0+28cafb5
@@ -467,7 +467,7 @@ spec:
         description: Helm chart for eks-anywhere-packages
         imageDigest: sha256:fb1794cae7960530f384704849d57631bd4e0df9869992046872c2dcb9ba43ef
         name: eks-anywhere-packages
-        uri: 10.136.0.2:443/eks-anywhere/eks-anywhere-packages:0.2.28-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/eks-anywhere-packages:0.2.28-eks-a-26
       packageController:
         arch:
         - amd64
@@ -476,7 +476,7 @@ spec:
         imageDigest: sha256:5ec8608552cdf7410a8a679901a12a9e59a643f461859640821520d8757725af
         name: eks-anywhere-packages
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/eks-anywhere-packages:v0.2.28-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/eks-anywhere-packages:v0.2.28-eks-a-26
       tokenRefresher:
         arch:
         - amd64
@@ -485,7 +485,7 @@ spec:
         imageDigest: sha256:08b696bb98f687e1081d487cf17c6bff4a47928bdacc4d9f341d49224601fcdd
         name: ecr-token-refresher
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/ecr-token-refresher:v0.2.28-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/ecr-token-refresher:v0.2.28-eks-a-26
       version: v0.2.28+657c319
     snow:
       bottlerocketBootstrapSnow:
@@ -496,7 +496,7 @@ spec:
         imageDigest: sha256:f86370a2698a981587510fac2942a9d5b0fe5e8af45599e09900f4e7a43b9fff
         name: bottlerocket-bootstrap-snow
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/bottlerocket-bootstrap-snow:v1-21-24-eks-a-26
+        uri: 10.136.0.2:5000/eks-anywhere/bottlerocket-bootstrap-snow:v1-21-24-eks-a-26
       components:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api-provider-aws-snow/manifests/infrastructure-snow/v0.1.21/infrastructure-components.yaml
       kubeVip:
@@ -507,7 +507,7 @@ spec:
         imageDigest: sha256:48e9c1e6e1ae5a943cccf6def867c67f1b576fc191f4ac757cd007f345b0f4d0
         name: kube-vip
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kube-vip/kube-vip:v0.5.5-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kube-vip/kube-vip:v0.5.5-eks-a-26
       manager:
         arch:
         - amd64
@@ -516,7 +516,7 @@ spec:
         imageDigest: sha256:2748b3427cf14a9bb5710fd946096c25b05ade5025512d03afd655a220ee55bf
         name: cluster-api-snow-controller
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/aws/cluster-api-provider-aws-snow/manager:v0.1.21-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/aws/cluster-api-provider-aws-snow/manager:v0.1.21-eks-a-26
       metadata:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api-provider-aws-snow/manifests/infrastructure-snow/v0.1.21/metadata.yaml
       version: v0.1.21+a8d502c
@@ -529,7 +529,7 @@ spec:
         imageDigest: sha256:e61ee865af4e2d4248f30929238ee80f4367f7a44ba4cff03fa362b103c6543c
         name: cluster-api-provider-tinkerbell
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/tinkerbell/cluster-api-provider-tinkerbell:9e9c2a397288908f73a4f499ac00aaf96d15deb6-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/tinkerbell/cluster-api-provider-tinkerbell:9e9c2a397288908f73a4f499ac00aaf96d15deb6-eks-a-26
       clusterTemplate:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api-provider-tinkerbell/manifests/infrastructure-tinkerbell/9e9c2a397288908f73a4f499ac00aaf96d15deb6/cluster-template.yaml
       components:
@@ -542,7 +542,7 @@ spec:
         imageDigest: sha256:bcdbf94785d7dd6b3fc6aad616672baba6e42c22286cd7b9cfbec0c4da81ea7c
         name: envoy
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/envoyproxy/envoy:v1.22.2.0-prod-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/envoyproxy/envoy:v1.22.2.0-prod-eks-a-26
       kubeVip:
         arch:
         - amd64
@@ -551,7 +551,7 @@ spec:
         imageDigest: sha256:48e9c1e6e1ae5a943cccf6def867c67f1b576fc191f4ac757cd007f345b0f4d0
         name: kube-vip
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kube-vip/kube-vip:v0.5.5-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kube-vip/kube-vip:v0.5.5-eks-a-26
       metadata:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api-provider-tinkerbell/manifests/infrastructure-tinkerbell/9e9c2a397288908f73a4f499ac00aaf96d15deb6/metadata.yaml
       tinkerbellStack:
@@ -564,7 +564,7 @@ spec:
             imageDigest: sha256:ec75a43a956793fd53b77723f464b69b9c4a27675dedd99fdb1ce74d74691c7d
             name: cexec
             os: linux
-            uri: 10.136.0.2:443/eks-anywhere/tinkerbell/hub/cexec:6c0f0d437bde2c836d90b000312c8b25fa1b65e1-eks-a-26
+            uri: public.ecr.aws/eks-anywhere/tinkerbell/hub/cexec:6c0f0d437bde2c836d90b000312c8b25fa1b65e1-eks-a-26
           imageToDisk:
             arch:
             - amd64
@@ -573,7 +573,7 @@ spec:
             imageDigest: sha256:73359e8afe20ec1d7316d09d45fe9a8cad67feb8b701869e63e4bf67f14f4695
             name: image2disk
             os: linux
-            uri: 10.136.0.2:443/eks-anywhere/tinkerbell/hub/image2disk:6c0f0d437bde2c836d90b000312c8b25fa1b65e1-eks-a-26
+            uri: public.ecr.aws/eks-anywhere/tinkerbell/hub/image2disk:6c0f0d437bde2c836d90b000312c8b25fa1b65e1-eks-a-26
           kexec:
             arch:
             - amd64
@@ -582,7 +582,7 @@ spec:
             imageDigest: sha256:dc67cfb29bdd05d47562c71a0bc4786897e704aea95a26ecd30eff9f9f7c2eeb
             name: kexec
             os: linux
-            uri: 10.136.0.2:443/eks-anywhere/tinkerbell/hub/kexec:6c0f0d437bde2c836d90b000312c8b25fa1b65e1-eks-a-26
+            uri: public.ecr.aws/eks-anywhere/tinkerbell/hub/kexec:6c0f0d437bde2c836d90b000312c8b25fa1b65e1-eks-a-26
           ociToDisk:
             arch:
             - amd64
@@ -591,7 +591,7 @@ spec:
             imageDigest: sha256:d301c4ce6622a55d8d36f0196d322c7d31c0bb04f9c3ec56d71b2ba99703ac3e
             name: oci2disk
             os: linux
-            uri: 10.136.0.2:443/eks-anywhere/tinkerbell/hub/oci2disk:6c0f0d437bde2c836d90b000312c8b25fa1b65e1-eks-a-26
+            uri: public.ecr.aws/eks-anywhere/tinkerbell/hub/oci2disk:6c0f0d437bde2c836d90b000312c8b25fa1b65e1-eks-a-26
           reboot:
             arch:
             - amd64
@@ -600,7 +600,7 @@ spec:
             imageDigest: sha256:f0387cc7dda122ca70045234d268a1e92eb7f5e4e862a38322bc5413aab68215
             name: reboot
             os: linux
-            uri: 10.136.0.2:443/eks-anywhere/tinkerbell/hub/reboot:6c0f0d437bde2c836d90b000312c8b25fa1b65e1-eks-a-26
+            uri: public.ecr.aws/eks-anywhere/tinkerbell/hub/reboot:6c0f0d437bde2c836d90b000312c8b25fa1b65e1-eks-a-26
           writeFile:
             arch:
             - amd64
@@ -609,7 +609,7 @@ spec:
             imageDigest: sha256:0002c7fca533ccc76538c7b982e555a12674e6f46017e01d3806a4bae643b2a3
             name: writefile
             os: linux
-            uri: 10.136.0.2:443/eks-anywhere/tinkerbell/hub/writefile:6c0f0d437bde2c836d90b000312c8b25fa1b65e1-eks-a-26
+            uri: public.ecr.aws/eks-anywhere/tinkerbell/hub/writefile:6c0f0d437bde2c836d90b000312c8b25fa1b65e1-eks-a-26
         boots:
           arch:
           - amd64
@@ -618,7 +618,7 @@ spec:
           imageDigest: sha256:d14b66d7ef18220872c629b4a21bbb69a5495c8c74755931b711e1dac572d589
           name: boots
           os: linux
-          uri: 10.136.0.2:443/eks-anywhere/tinkerbell/boots:79b1d9acb65dfd0527b44800eddbdcf6b751c8d8-eks-a-26
+          uri: public.ecr.aws/eks-anywhere/tinkerbell/boots:79b1d9acb65dfd0527b44800eddbdcf6b751c8d8-eks-a-26
         hegel:
           arch:
           - amd64
@@ -627,7 +627,7 @@ spec:
           imageDigest: sha256:997f3adab9ecac1151aec19a4785d51fedf3f26e629b9936b5e6f8d6aa605611
           name: hegel
           os: linux
-          uri: 10.136.0.2:443/eks-anywhere/tinkerbell/hegel:7b286fdc8e8fa91a6e9a179a5494b6ee29fce17b-eks-a-26
+          uri: public.ecr.aws/eks-anywhere/tinkerbell/hegel:7b286fdc8e8fa91a6e9a179a5494b6ee29fce17b-eks-a-26
         hook:
           bootkit:
             arch:
@@ -637,7 +637,7 @@ spec:
             imageDigest: sha256:a1ff9f60e05a76ddf16b5d55476f5a43935a1422423353362187f8a7a2a3e4d3
             name: hook-bootkit
             os: linux
-            uri: 10.136.0.2:443/eks-anywhere/tinkerbell/hook-bootkit:6d43b8b331c7a389f3ffeaa388fa9aa98248d7a2-eks-a-26
+            uri: public.ecr.aws/eks-anywhere/tinkerbell/hook-bootkit:6d43b8b331c7a389f3ffeaa388fa9aa98248d7a2-eks-a-26
           docker:
             arch:
             - amd64
@@ -646,7 +646,7 @@ spec:
             imageDigest: sha256:01bc24bed4532587110c6320ba8201063645ef8f2af519f4d07c6132f01c8923
             name: hook-docker
             os: linux
-            uri: 10.136.0.2:443/eks-anywhere/tinkerbell/hook-docker:6d43b8b331c7a389f3ffeaa388fa9aa98248d7a2-eks-a-26
+            uri: public.ecr.aws/eks-anywhere/tinkerbell/hook-docker:6d43b8b331c7a389f3ffeaa388fa9aa98248d7a2-eks-a-26
           initramfs:
             amd:
               description: Tinkerbell operating system installation environment (osie)
@@ -666,7 +666,7 @@ spec:
             imageDigest: sha256:0467274361bac7488d4191bcfa89736dbddb497e637cbdc4f214497b089f9827
             name: hook-kernel
             os: linux
-            uri: 10.136.0.2:443/eks-anywhere/tinkerbell/hook-kernel:6d43b8b331c7a389f3ffeaa388fa9aa98248d7a2-eks-a-26
+            uri: public.ecr.aws/eks-anywhere/tinkerbell/hook-kernel:6d43b8b331c7a389f3ffeaa388fa9aa98248d7a2-eks-a-26
           vmlinuz:
             amd:
               description: Tinkerbell operating system installation environment (osie)
@@ -686,7 +686,7 @@ spec:
           imageDigest: sha256:e7d7074164b3f88b35e343f7dbd973a55c6581d3d13c3d542ed2b66039ce0761
           name: rufio
           os: linux
-          uri: 10.136.0.2:443/eks-anywhere/tinkerbell/rufio:a4053e5c1e7f32fb5c0a9962846c219c3ef8aaf3-eks-a-26
+          uri: public.ecr.aws/eks-anywhere/tinkerbell/rufio:a4053e5c1e7f32fb5c0a9962846c219c3ef8aaf3-eks-a-26
         tink:
           tinkController:
             arch:
@@ -696,7 +696,7 @@ spec:
             imageDigest: sha256:3066b307aaf7c224d0fbd83a71b0ee0622860bdd2679cf87feb62d407b23d125
             name: tink-controller
             os: linux
-            uri: 10.136.0.2:443/eks-anywhere/tinkerbell/tink/tink-controller:19b68beab1a902846c10ee3422cafb4fd5c3307e-eks-a-26
+            uri: public.ecr.aws/eks-anywhere/tinkerbell/tink/tink-controller:19b68beab1a902846c10ee3422cafb4fd5c3307e-eks-a-26
           tinkServer:
             arch:
             - amd64
@@ -705,7 +705,7 @@ spec:
             imageDigest: sha256:dcc91a1e4c98b32eb144cf6b9703c9c30abd0f23b3b7e08e71440630b1ab0a3f
             name: tink-server
             os: linux
-            uri: 10.136.0.2:443/eks-anywhere/tinkerbell/tink/tink-server:19b68beab1a902846c10ee3422cafb4fd5c3307e-eks-a-26
+            uri: public.ecr.aws/eks-anywhere/tinkerbell/tink/tink-server:19b68beab1a902846c10ee3422cafb4fd5c3307e-eks-a-26
           tinkWorker:
             arch:
             - amd64
@@ -714,12 +714,12 @@ spec:
             imageDigest: sha256:368785248ccb27b87d01a7551b760558f8bb4f8f082a5c1be2233535c4600290
             name: tink-worker
             os: linux
-            uri: 10.136.0.2:443/eks-anywhere/tinkerbell/tink/tink-worker:19b68beab1a902846c10ee3422cafb4fd5c3307e-eks-a-26
+            uri: public.ecr.aws/eks-anywhere/tinkerbell/tink/tink-worker:19b68beab1a902846c10ee3422cafb4fd5c3307e-eks-a-26
         tinkerbellChart:
           description: Helm chart for tinkerbell-chart
           imageDigest: sha256:55709c26c4869e5099f0bac318f1f26d8da94083278e4e4dce6a844734506d3f
           name: tinkerbell-chart
-          uri: 10.136.0.2:443/eks-anywhere/tinkerbell/tinkerbell-chart:0.1.6-eks-a-26
+          uri: public.ecr.aws/eks-anywhere/tinkerbell/tinkerbell-chart:0.1.6-eks-a-26
       version: v0.1.0
     vSphere:
       clusterAPIController:
@@ -730,7 +730,7 @@ spec:
         imageDigest: sha256:24d151efd8c46e41608a9208e54f61708cfa7cc5e61e36a0417972213057fd99
         name: cluster-api-provider-vsphere
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kubernetes-sigs/cluster-api-provider-vsphere/release/manager:v1.3.1-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kubernetes-sigs/cluster-api-provider-vsphere/release/manager:v1.3.1-eks-a-26
       clusterTemplate:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api-provider-vsphere/manifests/infrastructure-vsphere/v1.3.1/cluster-template.yaml
       components:
@@ -743,7 +743,7 @@ spec:
         imageDigest: sha256:60b86d68b6701da0f20c1362d5bf7b81b1532cacfdf618dea2c45ea70f0585ec
         name: vsphere-csi-driver
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kubernetes-sigs/vsphere-csi-driver/csi/driver:v2.2.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kubernetes-sigs/vsphere-csi-driver/csi/driver:v2.2.0-eks-a-26
       kubeProxy:
         arch:
         - amd64
@@ -752,7 +752,7 @@ spec:
         imageDigest: sha256:172caff0d99616c3c5fc38b8490f061bb8a1c4080ea45e07231e46a30c079209
         name: kube-rbac-proxy
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
       kubeVip:
         arch:
         - amd64
@@ -761,7 +761,7 @@ spec:
         imageDigest: sha256:48e9c1e6e1ae5a943cccf6def867c67f1b576fc191f4ac757cd007f345b0f4d0
         name: kube-vip
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kube-vip/kube-vip:v0.5.5-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kube-vip/kube-vip:v0.5.5-eks-a-26
       manager:
         arch:
         - amd64
@@ -770,7 +770,7 @@ spec:
         imageDigest: sha256:06e2979c98ba256fc6f7d9f3f8e8abdaf286b0f20ee930817c95455a79ff22fa
         name: cloud-provider-vsphere
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kubernetes/cloud-provider-vsphere/cpi/manager:v1.21.3-eks-d-1-21-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kubernetes/cloud-provider-vsphere/cpi/manager:v1.21.3-eks-d-1-21-eks-a-26
       metadata:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api-provider-vsphere/manifests/infrastructure-vsphere/v1.3.1/metadata.yaml
       syncer:
@@ -781,7 +781,7 @@ spec:
         imageDigest: sha256:e252b76321c5404e5396acf90722758411ef31912ed0f37b5dfb6bfe9e195b60
         name: vsphere-csi-syncer
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kubernetes-sigs/vsphere-csi-driver/csi/syncer:v2.2.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kubernetes-sigs/vsphere-csi-driver/csi/syncer:v2.2.0-eks-a-26
       version: v1.3.1+18a064d
   - bootstrap:
       components:
@@ -794,7 +794,7 @@ spec:
         imageDigest: sha256:bf189966564988af80655c2f2eb4acc7f880b465dedb5e9aacaa5b569a87466e
         name: kubeadm-bootstrap-controller
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kubernetes-sigs/cluster-api/kubeadm-bootstrap-controller:v1.2.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kubernetes-sigs/cluster-api/kubeadm-bootstrap-controller:v1.2.0-eks-a-26
       kubeProxy:
         arch:
         - amd64
@@ -803,7 +803,7 @@ spec:
         imageDigest: sha256:172caff0d99616c3c5fc38b8490f061bb8a1c4080ea45e07231e46a30c079209
         name: kube-rbac-proxy
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
       metadata:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api/manifests/bootstrap-kubeadm/v1.2.0/metadata.yaml
       version: v1.2.0+99a3807
@@ -815,7 +815,7 @@ spec:
         imageDigest: sha256:bf56c9712189f5fc65d35544e2a84d3a7a1a2c05f2840fab54c57e8a3f8b57a4
         name: bottlerocket-admin
         os: linux
-        uri: 10.136.0.2:443/bottlerocket/bottlerocket-admin:v0.9.2
+        uri: public.ecr.aws/bottlerocket/bottlerocket-admin:v0.9.2
       control:
         arch:
         - amd64
@@ -823,7 +823,7 @@ spec:
         imageDigest: sha256:a8f8f30ed6bd3f4848cf79d19f6c31d60b9c898649e7ee1d3081dac4a36421a7
         name: bottlerocket-control
         os: linux
-        uri: 10.136.0.2:443/bottlerocket/bottlerocket-control:v0.6.3
+        uri: public.ecr.aws/bottlerocket/bottlerocket-control:v0.6.3
       kubeadmBootstrap:
         arch:
         - amd64
@@ -832,7 +832,7 @@ spec:
         imageDigest: sha256:0b86fe68ec5aad804e9facfff195347548bf95369248642cf522b432d1804f98
         name: bottlerocket-bootstrap
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/bottlerocket-bootstrap:v1-22-17-eks-a-26
+        uri: 10.136.0.2:5000/eks-anywhere/bottlerocket-bootstrap:v1-22-17-eks-a-26
     certManager:
       acmesolver:
         arch:
@@ -842,7 +842,7 @@ spec:
         imageDigest: sha256:9297f8d98a49ad7b53e49923e84b32adb335268b6c45bbd61d9f8f286f7245b4
         name: cert-manager-acmesolver
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/cert-manager/cert-manager-acmesolver:v1.9.1-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/cert-manager/cert-manager-acmesolver:v1.9.1-eks-a-26
       cainjector:
         arch:
         - amd64
@@ -851,7 +851,7 @@ spec:
         imageDigest: sha256:29a4d7a3ea5a2c030f4448afe46b20acfce9314791dd681db8b09e99bae8fe89
         name: cert-manager-cainjector
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/cert-manager/cert-manager-cainjector:v1.9.1-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/cert-manager/cert-manager-cainjector:v1.9.1-eks-a-26
       controller:
         arch:
         - amd64
@@ -860,7 +860,7 @@ spec:
         imageDigest: sha256:b16b58ee27ea58e36cb49f7615824a2ef8f8c0aa3ed47ebc23d195113d9138dd
         name: cert-manager-controller
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/cert-manager/cert-manager-controller:v1.9.1-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/cert-manager/cert-manager-controller:v1.9.1-eks-a-26
       ctl:
         arch:
         - amd64
@@ -869,7 +869,7 @@ spec:
         imageDigest: sha256:fe7e77437832867a9c8c243aba8c9b8f2c33eccf1a798670fe8a449edc3dfe2e
         name: cert-manager-ctl
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/cert-manager/cert-manager-ctl:v1.9.1-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/cert-manager/cert-manager-ctl:v1.9.1-eks-a-26
       manifest:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cert-manager/manifests/v1.9.1/cert-manager.yaml
       version: v1.9.1+7bb5e2b
@@ -881,7 +881,7 @@ spec:
         imageDigest: sha256:9ece2181eedef5626f7d392f40e9914302868c1f5e5fa91276fdb1558be1c1d5
         name: cert-manager-webhook
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/cert-manager/cert-manager-webhook:v1.9.1-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/cert-manager/cert-manager-webhook:v1.9.1-eks-a-26
     cilium:
       cilium:
         arch:
@@ -890,12 +890,12 @@ spec:
         imageDigest: sha256:197b3706173bffc9563f7211788dfd326a36d1ac99d04c42357f80b7143da0d7
         name: cilium
         os: linux
-        uri: 10.136.0.2:443/isovalent/cilium:v1.11.10-eksa.2
+        uri: public.ecr.aws/isovalent/cilium:v1.11.10-eksa.2
       helmChart:
         description: Helm chart for cilium-chart
         imageDigest: sha256:252241c7986b52a4bec31c50e31daf349374b730dcb8aaa6db3a2b1cb025ff7c
         name: cilium-chart
-        uri: 10.136.0.2:443/isovalent/cilium:1.11.10-eksa.2
+        uri: public.ecr.aws/isovalent/cilium:1.11.10-eksa.2
       manifest:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cilium/manifests/cilium/v1.11.10-eksa.2/cilium.yaml
       operator:
@@ -905,7 +905,7 @@ spec:
         imageDigest: sha256:ec2677f33c9aa9b6a8f600314c718a913eb1f0d0006a991f69ee0a775bb29e14
         name: operator-generic
         os: linux
-        uri: 10.136.0.2:443/isovalent/operator-generic:v1.11.10-eksa.2
+        uri: public.ecr.aws/isovalent/operator-generic:v1.11.10-eksa.2
       version: v1.11.10-eksa.2
     cloudStack:
       clusterAPIController:
@@ -916,7 +916,7 @@ spec:
         imageDigest: sha256:1a31dd9c520d4081a039b275ed75b0a694632d6a83a6e8c3b0caf2e3a78086e2
         name: cluster-api-provider-cloudstack
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kubernetes-sigs/cluster-api-provider-cloudstack/release/manager:v0.4.9-rc4-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kubernetes-sigs/cluster-api-provider-cloudstack/release/manager:v0.4.9-rc4-eks-a-26
       components:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api-provider-cloudstack/manifests/infrastructure-cloudstack/v0.4.9-rc4/infrastructure-components.yaml
       kubeRbacProxy:
@@ -927,7 +927,7 @@ spec:
         imageDigest: sha256:172caff0d99616c3c5fc38b8490f061bb8a1c4080ea45e07231e46a30c079209
         name: kube-rbac-proxy
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
       kubeVip:
         arch:
         - amd64
@@ -936,7 +936,7 @@ spec:
         imageDigest: sha256:48e9c1e6e1ae5a943cccf6def867c67f1b576fc191f4ac757cd007f345b0f4d0
         name: kube-vip
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kube-vip/kube-vip:v0.5.5-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kube-vip/kube-vip:v0.5.5-eks-a-26
       metadata:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api-provider-cloudstack/manifests/infrastructure-cloudstack/v0.4.9-rc4/metadata.yaml
       version: v0.4.9-rc4+fec458f
@@ -951,7 +951,7 @@ spec:
         imageDigest: sha256:1d5d49d6653ca89275b36c3ee23c0c0e0ad908b9db70242d77ab549dd367fd3f
         name: cluster-api-controller
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kubernetes-sigs/cluster-api/cluster-api-controller:v1.2.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kubernetes-sigs/cluster-api/cluster-api-controller:v1.2.0-eks-a-26
       kubeProxy:
         arch:
         - amd64
@@ -960,7 +960,7 @@ spec:
         imageDigest: sha256:172caff0d99616c3c5fc38b8490f061bb8a1c4080ea45e07231e46a30c079209
         name: kube-rbac-proxy
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
       metadata:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api/manifests/cluster-api/v1.2.0/metadata.yaml
       version: v1.2.0+73969a7
@@ -975,7 +975,7 @@ spec:
         imageDigest: sha256:98744ce8a528ee59bea888a5cf27e197aec01022307596e367b8348bae7e34f7
         name: kubeadm-control-plane-controller
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kubernetes-sigs/cluster-api/kubeadm-control-plane-controller:v1.2.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kubernetes-sigs/cluster-api/kubeadm-control-plane-controller:v1.2.0-eks-a-26
       kubeProxy:
         arch:
         - amd64
@@ -984,7 +984,7 @@ spec:
         imageDigest: sha256:172caff0d99616c3c5fc38b8490f061bb8a1c4080ea45e07231e46a30c079209
         name: kube-rbac-proxy
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
       metadata:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api/manifests/control-plane-kubeadm/v1.2.0/metadata.yaml
       version: v1.2.0+5f68de4
@@ -1001,7 +1001,7 @@ spec:
         imageDigest: sha256:172caff0d99616c3c5fc38b8490f061bb8a1c4080ea45e07231e46a30c079209
         name: kube-rbac-proxy
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
       manager:
         arch:
         - amd64
@@ -1010,7 +1010,7 @@ spec:
         imageDigest: sha256:64b587d69a0863fdaedfe564d89d76a8e72157d1887d8246d1edaadb8e062b38
         name: cluster-api-provider-docker
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kubernetes-sigs/cluster-api/capd-manager:v1.2.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kubernetes-sigs/cluster-api/capd-manager:v1.2.0-eks-a-26
       metadata:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api/manifests/infrastructure-docker/v1.2.0/metadata.yaml
       version: v1.2.0+af7c54b
@@ -1053,7 +1053,7 @@ spec:
         imageDigest: sha256:ec3870e1a0512403bee703af71a6a73055eaf6f1ffde73fabcb0d2c11c7b8a53
         name: kind-node
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kubernetes-sigs/kind/node:v1.22.17-eks-d-1-22-17-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kubernetes-sigs/kind/node:v1.22.17-eks-d-1-22-17-eks-a-26
       kubeVersion: v1.22.17
       manifestUrl: https://distro.eks.amazonaws.com/kubernetes-1-22/kubernetes-1-22-eks-17.yaml
       name: kubernetes-1-22-eks-17
@@ -1088,7 +1088,7 @@ spec:
         imageDigest: sha256:a024605f429ae85c5b0751b3a7929824de7a99477e6134c99677fd614b387f65
         name: eks-anywhere-cli-tools
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/cli-tools:v0.14.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/cli-tools:v0.14.0-eks-a-26
       clusterController:
         arch:
         - amd64
@@ -1097,7 +1097,7 @@ spec:
         imageDigest: sha256:576c01d68bde60e9ada7bb56bbe2f0f64394c7aac8b2bbb686f974ef63911cf9
         name: eks-anywhere-cluster-controller
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/cluster-controller:v0.14.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/cluster-controller:v0.14.0-eks-a-26
       components:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/eks-anywhere/manifests/cluster-controller/v0.14.0/eksa-components.yaml
       diagnosticCollector:
@@ -1108,7 +1108,7 @@ spec:
         imageDigest: sha256:7bb784289bf9fe416b7fa9a58ef7f06d97ee0a18b94793aca5a188dee92e3a2f
         name: eks-anywhere-diagnostic-collector
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/diagnostic-collector:v0.14.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/diagnostic-collector:v0.14.0-eks-a-26
       version: v0.14.0+635e2f8
     etcdadmBootstrap:
       components:
@@ -1121,7 +1121,7 @@ spec:
         imageDigest: sha256:6077295d1a131aa4a96e94b90ed4cfea3e967244fb62daf7e5b10bda8b881aa0
         name: etcdadm-bootstrap-provider
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/aws/etcdadm-bootstrap-provider:v1.0.5-rc3-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/aws/etcdadm-bootstrap-provider:v1.0.5-rc3-eks-a-26
       kubeProxy:
         arch:
         - amd64
@@ -1130,7 +1130,7 @@ spec:
         imageDigest: sha256:172caff0d99616c3c5fc38b8490f061bb8a1c4080ea45e07231e46a30c079209
         name: kube-rbac-proxy
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
       metadata:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/etcdadm-bootstrap-provider/manifests/bootstrap-etcdadm-bootstrap/v1.0.5-rc3/metadata.yaml
       version: v1.0.5-rc3+e21737f
@@ -1145,7 +1145,7 @@ spec:
         imageDigest: sha256:c5a65c440d36085674c83305e0ac45879d68793ae81b8ceff85e8832e8193738
         name: etcdadm-controller
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/aws/etcdadm-controller:v1.0.4-rc4-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/aws/etcdadm-controller:v1.0.4-rc4-eks-a-26
       kubeProxy:
         arch:
         - amd64
@@ -1154,7 +1154,7 @@ spec:
         imageDigest: sha256:172caff0d99616c3c5fc38b8490f061bb8a1c4080ea45e07231e46a30c079209
         name: kube-rbac-proxy
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
       metadata:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/etcdadm-controller/manifests/bootstrap-etcdadm-controller/v1.0.4-rc4/metadata.yaml
       version: v1.0.4-rc4+425d719
@@ -1167,7 +1167,7 @@ spec:
         imageDigest: sha256:3e09a1c2bfc8d2ac95b610d53d96b0e6ed8aed2ddc8ebec4c06e8a5c632880ad
         name: helm-controller
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/fluxcd/helm-controller:v0.22.2-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/fluxcd/helm-controller:v0.22.2-eks-a-26
       kustomizeController:
         arch:
         - amd64
@@ -1176,7 +1176,7 @@ spec:
         imageDigest: sha256:efcf4b0dd083c450444172806c1ca606fbe3ad0bd57baaefd812d28fbb347c27
         name: kustomize-controller
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/fluxcd/kustomize-controller:v0.26.3-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/fluxcd/kustomize-controller:v0.26.3-eks-a-26
       notificationController:
         arch:
         - amd64
@@ -1185,7 +1185,7 @@ spec:
         imageDigest: sha256:448e4bfbf21b8b3d70cf6a61efee2839c364339b7514b56e542e2851789b5b82
         name: notification-controller
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/fluxcd/notification-controller:v0.24.1-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/fluxcd/notification-controller:v0.24.1-eks-a-26
       sourceController:
         arch:
         - amd64
@@ -1194,7 +1194,7 @@ spec:
         imageDigest: sha256:7fb054a18d0b84b31569293bb7042e693a90cae46f4397d67d4980f95eba5e9f
         name: source-controller
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/fluxcd/source-controller:v0.25.9-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/fluxcd/source-controller:v0.25.9-eks-a-26
       version: v0.31.3+9ff63c4
     haproxy:
       image:
@@ -1205,7 +1205,7 @@ spec:
         imageDigest: sha256:5d439a352a42cddd11e6b2c9f0a738f1d6dfd962340bd89ed21d4718ef4ac4a4
         name: haproxy
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kubernetes-sigs/kind/haproxy:v0.17.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kubernetes-sigs/kind/haproxy:v0.17.0-eks-a-26
     kindnetd:
       manifest:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/kind/manifests/kindnetd/v0.17.0/kindnetd.yaml
@@ -1220,7 +1220,7 @@ spec:
         imageDigest: sha256:3399c03825bd7ce2e90e480c2061cc361dc2afc3b00c1bd60a900ce5f47ec338
         name: cluster-api-provider-nutanix
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/nutanix-cloud-native/cluster-api-provider-nutanix:v1.1.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/nutanix-cloud-native/cluster-api-provider-nutanix:v1.1.0-eks-a-26
       clusterTemplate:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api-provider-nutanix/manifests/infrastructure-nutanix/v1.1.0/cluster-template.yaml
       components:
@@ -1233,7 +1233,7 @@ spec:
         imageDigest: sha256:48e9c1e6e1ae5a943cccf6def867c67f1b576fc191f4ac757cd007f345b0f4d0
         name: kube-vip
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kube-vip/kube-vip:v0.5.5-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kube-vip/kube-vip:v0.5.5-eks-a-26
       metadata:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api-provider-nutanix/manifests/infrastructure-nutanix/v1.1.0/metadata.yaml
       version: v1.1.0+28cafb5
@@ -1242,7 +1242,7 @@ spec:
         description: Helm chart for eks-anywhere-packages
         imageDigest: sha256:fb1794cae7960530f384704849d57631bd4e0df9869992046872c2dcb9ba43ef
         name: eks-anywhere-packages
-        uri: 10.136.0.2:443/eks-anywhere/eks-anywhere-packages:0.2.28-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/eks-anywhere-packages:0.2.28-eks-a-26
       packageController:
         arch:
         - amd64
@@ -1251,7 +1251,7 @@ spec:
         imageDigest: sha256:5ec8608552cdf7410a8a679901a12a9e59a643f461859640821520d8757725af
         name: eks-anywhere-packages
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/eks-anywhere-packages:v0.2.28-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/eks-anywhere-packages:v0.2.28-eks-a-26
       tokenRefresher:
         arch:
         - amd64
@@ -1260,7 +1260,7 @@ spec:
         imageDigest: sha256:08b696bb98f687e1081d487cf17c6bff4a47928bdacc4d9f341d49224601fcdd
         name: ecr-token-refresher
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/ecr-token-refresher:v0.2.28-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/ecr-token-refresher:v0.2.28-eks-a-26
       version: v0.2.28+657c319
     snow:
       bottlerocketBootstrapSnow:
@@ -1271,7 +1271,7 @@ spec:
         imageDigest: sha256:b2d9f3947097a8e276b3dd89935c4ee7e899462a0e59ec5e5c9577bdfd896fda
         name: bottlerocket-bootstrap-snow
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/bottlerocket-bootstrap-snow:v1-22-17-eks-a-26
+        uri: 10.136.0.2:5000/eks-anywhere/bottlerocket-bootstrap-snow:v1-22-17-eks-a-26
       components:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api-provider-aws-snow/manifests/infrastructure-snow/v0.1.21/infrastructure-components.yaml
       kubeVip:
@@ -1282,7 +1282,7 @@ spec:
         imageDigest: sha256:48e9c1e6e1ae5a943cccf6def867c67f1b576fc191f4ac757cd007f345b0f4d0
         name: kube-vip
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kube-vip/kube-vip:v0.5.5-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kube-vip/kube-vip:v0.5.5-eks-a-26
       manager:
         arch:
         - amd64
@@ -1291,7 +1291,7 @@ spec:
         imageDigest: sha256:2748b3427cf14a9bb5710fd946096c25b05ade5025512d03afd655a220ee55bf
         name: cluster-api-snow-controller
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/aws/cluster-api-provider-aws-snow/manager:v0.1.21-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/aws/cluster-api-provider-aws-snow/manager:v0.1.21-eks-a-26
       metadata:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api-provider-aws-snow/manifests/infrastructure-snow/v0.1.21/metadata.yaml
       version: v0.1.21+101960c
@@ -1304,7 +1304,7 @@ spec:
         imageDigest: sha256:e61ee865af4e2d4248f30929238ee80f4367f7a44ba4cff03fa362b103c6543c
         name: cluster-api-provider-tinkerbell
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/tinkerbell/cluster-api-provider-tinkerbell:9e9c2a397288908f73a4f499ac00aaf96d15deb6-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/tinkerbell/cluster-api-provider-tinkerbell:9e9c2a397288908f73a4f499ac00aaf96d15deb6-eks-a-26
       clusterTemplate:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api-provider-tinkerbell/manifests/infrastructure-tinkerbell/9e9c2a397288908f73a4f499ac00aaf96d15deb6/cluster-template.yaml
       components:
@@ -1317,7 +1317,7 @@ spec:
         imageDigest: sha256:bcdbf94785d7dd6b3fc6aad616672baba6e42c22286cd7b9cfbec0c4da81ea7c
         name: envoy
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/envoyproxy/envoy:v1.22.2.0-prod-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/envoyproxy/envoy:v1.22.2.0-prod-eks-a-26
       kubeVip:
         arch:
         - amd64
@@ -1326,7 +1326,7 @@ spec:
         imageDigest: sha256:48e9c1e6e1ae5a943cccf6def867c67f1b576fc191f4ac757cd007f345b0f4d0
         name: kube-vip
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kube-vip/kube-vip:v0.5.5-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kube-vip/kube-vip:v0.5.5-eks-a-26
       metadata:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api-provider-tinkerbell/manifests/infrastructure-tinkerbell/9e9c2a397288908f73a4f499ac00aaf96d15deb6/metadata.yaml
       tinkerbellStack:
@@ -1339,7 +1339,7 @@ spec:
             imageDigest: sha256:ec75a43a956793fd53b77723f464b69b9c4a27675dedd99fdb1ce74d74691c7d
             name: cexec
             os: linux
-            uri: 10.136.0.2:443/eks-anywhere/tinkerbell/hub/cexec:6c0f0d437bde2c836d90b000312c8b25fa1b65e1-eks-a-26
+            uri: public.ecr.aws/eks-anywhere/tinkerbell/hub/cexec:6c0f0d437bde2c836d90b000312c8b25fa1b65e1-eks-a-26
           imageToDisk:
             arch:
             - amd64
@@ -1348,7 +1348,7 @@ spec:
             imageDigest: sha256:73359e8afe20ec1d7316d09d45fe9a8cad67feb8b701869e63e4bf67f14f4695
             name: image2disk
             os: linux
-            uri: 10.136.0.2:443/eks-anywhere/tinkerbell/hub/image2disk:6c0f0d437bde2c836d90b000312c8b25fa1b65e1-eks-a-26
+            uri: public.ecr.aws/eks-anywhere/tinkerbell/hub/image2disk:6c0f0d437bde2c836d90b000312c8b25fa1b65e1-eks-a-26
           kexec:
             arch:
             - amd64
@@ -1357,7 +1357,7 @@ spec:
             imageDigest: sha256:dc67cfb29bdd05d47562c71a0bc4786897e704aea95a26ecd30eff9f9f7c2eeb
             name: kexec
             os: linux
-            uri: 10.136.0.2:443/eks-anywhere/tinkerbell/hub/kexec:6c0f0d437bde2c836d90b000312c8b25fa1b65e1-eks-a-26
+            uri: public.ecr.aws/eks-anywhere/tinkerbell/hub/kexec:6c0f0d437bde2c836d90b000312c8b25fa1b65e1-eks-a-26
           ociToDisk:
             arch:
             - amd64
@@ -1366,7 +1366,7 @@ spec:
             imageDigest: sha256:d301c4ce6622a55d8d36f0196d322c7d31c0bb04f9c3ec56d71b2ba99703ac3e
             name: oci2disk
             os: linux
-            uri: 10.136.0.2:443/eks-anywhere/tinkerbell/hub/oci2disk:6c0f0d437bde2c836d90b000312c8b25fa1b65e1-eks-a-26
+            uri: public.ecr.aws/eks-anywhere/tinkerbell/hub/oci2disk:6c0f0d437bde2c836d90b000312c8b25fa1b65e1-eks-a-26
           reboot:
             arch:
             - amd64
@@ -1375,7 +1375,7 @@ spec:
             imageDigest: sha256:f0387cc7dda122ca70045234d268a1e92eb7f5e4e862a38322bc5413aab68215
             name: reboot
             os: linux
-            uri: 10.136.0.2:443/eks-anywhere/tinkerbell/hub/reboot:6c0f0d437bde2c836d90b000312c8b25fa1b65e1-eks-a-26
+            uri: public.ecr.aws/eks-anywhere/tinkerbell/hub/reboot:6c0f0d437bde2c836d90b000312c8b25fa1b65e1-eks-a-26
           writeFile:
             arch:
             - amd64
@@ -1384,7 +1384,7 @@ spec:
             imageDigest: sha256:0002c7fca533ccc76538c7b982e555a12674e6f46017e01d3806a4bae643b2a3
             name: writefile
             os: linux
-            uri: 10.136.0.2:443/eks-anywhere/tinkerbell/hub/writefile:6c0f0d437bde2c836d90b000312c8b25fa1b65e1-eks-a-26
+            uri: public.ecr.aws/eks-anywhere/tinkerbell/hub/writefile:6c0f0d437bde2c836d90b000312c8b25fa1b65e1-eks-a-26
         boots:
           arch:
           - amd64
@@ -1393,7 +1393,7 @@ spec:
           imageDigest: sha256:d14b66d7ef18220872c629b4a21bbb69a5495c8c74755931b711e1dac572d589
           name: boots
           os: linux
-          uri: 10.136.0.2:443/eks-anywhere/tinkerbell/boots:79b1d9acb65dfd0527b44800eddbdcf6b751c8d8-eks-a-26
+          uri: public.ecr.aws/eks-anywhere/tinkerbell/boots:79b1d9acb65dfd0527b44800eddbdcf6b751c8d8-eks-a-26
         hegel:
           arch:
           - amd64
@@ -1402,7 +1402,7 @@ spec:
           imageDigest: sha256:997f3adab9ecac1151aec19a4785d51fedf3f26e629b9936b5e6f8d6aa605611
           name: hegel
           os: linux
-          uri: 10.136.0.2:443/eks-anywhere/tinkerbell/hegel:7b286fdc8e8fa91a6e9a179a5494b6ee29fce17b-eks-a-26
+          uri: public.ecr.aws/eks-anywhere/tinkerbell/hegel:7b286fdc8e8fa91a6e9a179a5494b6ee29fce17b-eks-a-26
         hook:
           bootkit:
             arch:
@@ -1412,7 +1412,7 @@ spec:
             imageDigest: sha256:a1ff9f60e05a76ddf16b5d55476f5a43935a1422423353362187f8a7a2a3e4d3
             name: hook-bootkit
             os: linux
-            uri: 10.136.0.2:443/eks-anywhere/tinkerbell/hook-bootkit:6d43b8b331c7a389f3ffeaa388fa9aa98248d7a2-eks-a-26
+            uri: public.ecr.aws/eks-anywhere/tinkerbell/hook-bootkit:6d43b8b331c7a389f3ffeaa388fa9aa98248d7a2-eks-a-26
           docker:
             arch:
             - amd64
@@ -1421,7 +1421,7 @@ spec:
             imageDigest: sha256:01bc24bed4532587110c6320ba8201063645ef8f2af519f4d07c6132f01c8923
             name: hook-docker
             os: linux
-            uri: 10.136.0.2:443/eks-anywhere/tinkerbell/hook-docker:6d43b8b331c7a389f3ffeaa388fa9aa98248d7a2-eks-a-26
+            uri: public.ecr.aws/eks-anywhere/tinkerbell/hook-docker:6d43b8b331c7a389f3ffeaa388fa9aa98248d7a2-eks-a-26
           initramfs:
             amd:
               description: Tinkerbell operating system installation environment (osie)
@@ -1441,7 +1441,7 @@ spec:
             imageDigest: sha256:0467274361bac7488d4191bcfa89736dbddb497e637cbdc4f214497b089f9827
             name: hook-kernel
             os: linux
-            uri: 10.136.0.2:443/eks-anywhere/tinkerbell/hook-kernel:6d43b8b331c7a389f3ffeaa388fa9aa98248d7a2-eks-a-26
+            uri: public.ecr.aws/eks-anywhere/tinkerbell/hook-kernel:6d43b8b331c7a389f3ffeaa388fa9aa98248d7a2-eks-a-26
           vmlinuz:
             amd:
               description: Tinkerbell operating system installation environment (osie)
@@ -1461,7 +1461,7 @@ spec:
           imageDigest: sha256:e7d7074164b3f88b35e343f7dbd973a55c6581d3d13c3d542ed2b66039ce0761
           name: rufio
           os: linux
-          uri: 10.136.0.2:443/eks-anywhere/tinkerbell/rufio:a4053e5c1e7f32fb5c0a9962846c219c3ef8aaf3-eks-a-26
+          uri: public.ecr.aws/eks-anywhere/tinkerbell/rufio:a4053e5c1e7f32fb5c0a9962846c219c3ef8aaf3-eks-a-26
         tink:
           tinkController:
             arch:
@@ -1471,7 +1471,7 @@ spec:
             imageDigest: sha256:3066b307aaf7c224d0fbd83a71b0ee0622860bdd2679cf87feb62d407b23d125
             name: tink-controller
             os: linux
-            uri: 10.136.0.2:443/eks-anywhere/tinkerbell/tink/tink-controller:19b68beab1a902846c10ee3422cafb4fd5c3307e-eks-a-26
+            uri: public.ecr.aws/eks-anywhere/tinkerbell/tink/tink-controller:19b68beab1a902846c10ee3422cafb4fd5c3307e-eks-a-26
           tinkServer:
             arch:
             - amd64
@@ -1480,7 +1480,7 @@ spec:
             imageDigest: sha256:dcc91a1e4c98b32eb144cf6b9703c9c30abd0f23b3b7e08e71440630b1ab0a3f
             name: tink-server
             os: linux
-            uri: 10.136.0.2:443/eks-anywhere/tinkerbell/tink/tink-server:19b68beab1a902846c10ee3422cafb4fd5c3307e-eks-a-26
+            uri: public.ecr.aws/eks-anywhere/tinkerbell/tink/tink-server:19b68beab1a902846c10ee3422cafb4fd5c3307e-eks-a-26
           tinkWorker:
             arch:
             - amd64
@@ -1489,12 +1489,12 @@ spec:
             imageDigest: sha256:368785248ccb27b87d01a7551b760558f8bb4f8f082a5c1be2233535c4600290
             name: tink-worker
             os: linux
-            uri: 10.136.0.2:443/eks-anywhere/tinkerbell/tink/tink-worker:19b68beab1a902846c10ee3422cafb4fd5c3307e-eks-a-26
+            uri: public.ecr.aws/eks-anywhere/tinkerbell/tink/tink-worker:19b68beab1a902846c10ee3422cafb4fd5c3307e-eks-a-26
         tinkerbellChart:
           description: Helm chart for tinkerbell-chart
           imageDigest: sha256:55709c26c4869e5099f0bac318f1f26d8da94083278e4e4dce6a844734506d3f
           name: tinkerbell-chart
-          uri: 10.136.0.2:443/eks-anywhere/tinkerbell/tinkerbell-chart:0.1.6-eks-a-26
+          uri: public.ecr.aws/eks-anywhere/tinkerbell/tinkerbell-chart:0.1.6-eks-a-26
       version: v0.1.0
     vSphere:
       clusterAPIController:
@@ -1505,7 +1505,7 @@ spec:
         imageDigest: sha256:24d151efd8c46e41608a9208e54f61708cfa7cc5e61e36a0417972213057fd99
         name: cluster-api-provider-vsphere
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kubernetes-sigs/cluster-api-provider-vsphere/release/manager:v1.3.1-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kubernetes-sigs/cluster-api-provider-vsphere/release/manager:v1.3.1-eks-a-26
       clusterTemplate:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api-provider-vsphere/manifests/infrastructure-vsphere/v1.3.1/cluster-template.yaml
       components:
@@ -1518,7 +1518,7 @@ spec:
         imageDigest: sha256:60b86d68b6701da0f20c1362d5bf7b81b1532cacfdf618dea2c45ea70f0585ec
         name: vsphere-csi-driver
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kubernetes-sigs/vsphere-csi-driver/csi/driver:v2.2.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kubernetes-sigs/vsphere-csi-driver/csi/driver:v2.2.0-eks-a-26
       kubeProxy:
         arch:
         - amd64
@@ -1527,7 +1527,7 @@ spec:
         imageDigest: sha256:172caff0d99616c3c5fc38b8490f061bb8a1c4080ea45e07231e46a30c079209
         name: kube-rbac-proxy
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
       kubeVip:
         arch:
         - amd64
@@ -1536,7 +1536,7 @@ spec:
         imageDigest: sha256:48e9c1e6e1ae5a943cccf6def867c67f1b576fc191f4ac757cd007f345b0f4d0
         name: kube-vip
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kube-vip/kube-vip:v0.5.5-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kube-vip/kube-vip:v0.5.5-eks-a-26
       manager:
         arch:
         - amd64
@@ -1545,7 +1545,7 @@ spec:
         imageDigest: sha256:0f5a18b8fd98ba4ee4bcedc938552361ef79b35b5ed53f9b9328c87e1d334123
         name: cloud-provider-vsphere
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kubernetes/cloud-provider-vsphere/cpi/manager:v1.22.6-eks-d-1-22-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kubernetes/cloud-provider-vsphere/cpi/manager:v1.22.6-eks-d-1-22-eks-a-26
       metadata:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api-provider-vsphere/manifests/infrastructure-vsphere/v1.3.1/metadata.yaml
       syncer:
@@ -1556,7 +1556,7 @@ spec:
         imageDigest: sha256:e252b76321c5404e5396acf90722758411ef31912ed0f37b5dfb6bfe9e195b60
         name: vsphere-csi-syncer
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kubernetes-sigs/vsphere-csi-driver/csi/syncer:v2.2.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kubernetes-sigs/vsphere-csi-driver/csi/syncer:v2.2.0-eks-a-26
       version: v1.3.1+0bdedc3
   - bootstrap:
       components:
@@ -1569,7 +1569,7 @@ spec:
         imageDigest: sha256:bf189966564988af80655c2f2eb4acc7f880b465dedb5e9aacaa5b569a87466e
         name: kubeadm-bootstrap-controller
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kubernetes-sigs/cluster-api/kubeadm-bootstrap-controller:v1.2.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kubernetes-sigs/cluster-api/kubeadm-bootstrap-controller:v1.2.0-eks-a-26
       kubeProxy:
         arch:
         - amd64
@@ -1578,7 +1578,7 @@ spec:
         imageDigest: sha256:172caff0d99616c3c5fc38b8490f061bb8a1c4080ea45e07231e46a30c079209
         name: kube-rbac-proxy
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
       metadata:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api/manifests/bootstrap-kubeadm/v1.2.0/metadata.yaml
       version: v1.2.0+99a3807
@@ -1590,7 +1590,7 @@ spec:
         imageDigest: sha256:bf56c9712189f5fc65d35544e2a84d3a7a1a2c05f2840fab54c57e8a3f8b57a4
         name: bottlerocket-admin
         os: linux
-        uri: 10.136.0.2:443/bottlerocket/bottlerocket-admin:v0.9.2
+        uri: public.ecr.aws/bottlerocket/bottlerocket-admin:v0.9.2
       control:
         arch:
         - amd64
@@ -1598,7 +1598,7 @@ spec:
         imageDigest: sha256:a8f8f30ed6bd3f4848cf79d19f6c31d60b9c898649e7ee1d3081dac4a36421a7
         name: bottlerocket-control
         os: linux
-        uri: 10.136.0.2:443/bottlerocket/bottlerocket-control:v0.6.3
+        uri: public.ecr.aws/bottlerocket/bottlerocket-control:v0.6.3
       kubeadmBootstrap:
         arch:
         - amd64
@@ -1607,7 +1607,7 @@ spec:
         imageDigest: sha256:93e7e17c3a12a4694769d9ebed77a4dfb56de5a050f43a54f6bdc73d0405538b
         name: bottlerocket-bootstrap
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/bottlerocket-bootstrap:v1-23-12-eks-a-26
+        uri: 10.136.0.2:5000/eks-anywhere/bottlerocket-bootstrap:v1-23-12-eks-a-26
     certManager:
       acmesolver:
         arch:
@@ -1617,7 +1617,7 @@ spec:
         imageDigest: sha256:9297f8d98a49ad7b53e49923e84b32adb335268b6c45bbd61d9f8f286f7245b4
         name: cert-manager-acmesolver
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/cert-manager/cert-manager-acmesolver:v1.9.1-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/cert-manager/cert-manager-acmesolver:v1.9.1-eks-a-26
       cainjector:
         arch:
         - amd64
@@ -1626,7 +1626,7 @@ spec:
         imageDigest: sha256:29a4d7a3ea5a2c030f4448afe46b20acfce9314791dd681db8b09e99bae8fe89
         name: cert-manager-cainjector
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/cert-manager/cert-manager-cainjector:v1.9.1-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/cert-manager/cert-manager-cainjector:v1.9.1-eks-a-26
       controller:
         arch:
         - amd64
@@ -1635,7 +1635,7 @@ spec:
         imageDigest: sha256:b16b58ee27ea58e36cb49f7615824a2ef8f8c0aa3ed47ebc23d195113d9138dd
         name: cert-manager-controller
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/cert-manager/cert-manager-controller:v1.9.1-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/cert-manager/cert-manager-controller:v1.9.1-eks-a-26
       ctl:
         arch:
         - amd64
@@ -1644,7 +1644,7 @@ spec:
         imageDigest: sha256:fe7e77437832867a9c8c243aba8c9b8f2c33eccf1a798670fe8a449edc3dfe2e
         name: cert-manager-ctl
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/cert-manager/cert-manager-ctl:v1.9.1-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/cert-manager/cert-manager-ctl:v1.9.1-eks-a-26
       manifest:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cert-manager/manifests/v1.9.1/cert-manager.yaml
       version: v1.9.1+7bb5e2b
@@ -1656,7 +1656,7 @@ spec:
         imageDigest: sha256:9ece2181eedef5626f7d392f40e9914302868c1f5e5fa91276fdb1558be1c1d5
         name: cert-manager-webhook
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/cert-manager/cert-manager-webhook:v1.9.1-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/cert-manager/cert-manager-webhook:v1.9.1-eks-a-26
     cilium:
       cilium:
         arch:
@@ -1665,12 +1665,12 @@ spec:
         imageDigest: sha256:197b3706173bffc9563f7211788dfd326a36d1ac99d04c42357f80b7143da0d7
         name: cilium
         os: linux
-        uri: 10.136.0.2:443/isovalent/cilium:v1.11.10-eksa.2
+        uri: public.ecr.aws/isovalent/cilium:v1.11.10-eksa.2
       helmChart:
         description: Helm chart for cilium-chart
         imageDigest: sha256:252241c7986b52a4bec31c50e31daf349374b730dcb8aaa6db3a2b1cb025ff7c
         name: cilium-chart
-        uri: 10.136.0.2:443/isovalent/cilium:1.11.10-eksa.2
+        uri: public.ecr.aws/isovalent/cilium:1.11.10-eksa.2
       manifest:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cilium/manifests/cilium/v1.11.10-eksa.2/cilium.yaml
       operator:
@@ -1680,7 +1680,7 @@ spec:
         imageDigest: sha256:ec2677f33c9aa9b6a8f600314c718a913eb1f0d0006a991f69ee0a775bb29e14
         name: operator-generic
         os: linux
-        uri: 10.136.0.2:443/isovalent/operator-generic:v1.11.10-eksa.2
+        uri: public.ecr.aws/isovalent/operator-generic:v1.11.10-eksa.2
       version: v1.11.10-eksa.2
     cloudStack:
       clusterAPIController:
@@ -1691,7 +1691,7 @@ spec:
         imageDigest: sha256:1a31dd9c520d4081a039b275ed75b0a694632d6a83a6e8c3b0caf2e3a78086e2
         name: cluster-api-provider-cloudstack
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kubernetes-sigs/cluster-api-provider-cloudstack/release/manager:v0.4.9-rc4-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kubernetes-sigs/cluster-api-provider-cloudstack/release/manager:v0.4.9-rc4-eks-a-26
       components:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api-provider-cloudstack/manifests/infrastructure-cloudstack/v0.4.9-rc4/infrastructure-components.yaml
       kubeRbacProxy:
@@ -1702,7 +1702,7 @@ spec:
         imageDigest: sha256:172caff0d99616c3c5fc38b8490f061bb8a1c4080ea45e07231e46a30c079209
         name: kube-rbac-proxy
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
       kubeVip:
         arch:
         - amd64
@@ -1711,7 +1711,7 @@ spec:
         imageDigest: sha256:48e9c1e6e1ae5a943cccf6def867c67f1b576fc191f4ac757cd007f345b0f4d0
         name: kube-vip
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kube-vip/kube-vip:v0.5.5-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kube-vip/kube-vip:v0.5.5-eks-a-26
       metadata:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api-provider-cloudstack/manifests/infrastructure-cloudstack/v0.4.9-rc4/metadata.yaml
       version: v0.4.9-rc4+fec458f
@@ -1726,7 +1726,7 @@ spec:
         imageDigest: sha256:1d5d49d6653ca89275b36c3ee23c0c0e0ad908b9db70242d77ab549dd367fd3f
         name: cluster-api-controller
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kubernetes-sigs/cluster-api/cluster-api-controller:v1.2.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kubernetes-sigs/cluster-api/cluster-api-controller:v1.2.0-eks-a-26
       kubeProxy:
         arch:
         - amd64
@@ -1735,7 +1735,7 @@ spec:
         imageDigest: sha256:172caff0d99616c3c5fc38b8490f061bb8a1c4080ea45e07231e46a30c079209
         name: kube-rbac-proxy
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
       metadata:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api/manifests/cluster-api/v1.2.0/metadata.yaml
       version: v1.2.0+73969a7
@@ -1750,7 +1750,7 @@ spec:
         imageDigest: sha256:98744ce8a528ee59bea888a5cf27e197aec01022307596e367b8348bae7e34f7
         name: kubeadm-control-plane-controller
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kubernetes-sigs/cluster-api/kubeadm-control-plane-controller:v1.2.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kubernetes-sigs/cluster-api/kubeadm-control-plane-controller:v1.2.0-eks-a-26
       kubeProxy:
         arch:
         - amd64
@@ -1759,7 +1759,7 @@ spec:
         imageDigest: sha256:172caff0d99616c3c5fc38b8490f061bb8a1c4080ea45e07231e46a30c079209
         name: kube-rbac-proxy
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
       metadata:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api/manifests/control-plane-kubeadm/v1.2.0/metadata.yaml
       version: v1.2.0+5f68de4
@@ -1776,7 +1776,7 @@ spec:
         imageDigest: sha256:172caff0d99616c3c5fc38b8490f061bb8a1c4080ea45e07231e46a30c079209
         name: kube-rbac-proxy
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
       manager:
         arch:
         - amd64
@@ -1785,7 +1785,7 @@ spec:
         imageDigest: sha256:64b587d69a0863fdaedfe564d89d76a8e72157d1887d8246d1edaadb8e062b38
         name: cluster-api-provider-docker
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kubernetes-sigs/cluster-api/capd-manager:v1.2.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kubernetes-sigs/cluster-api/capd-manager:v1.2.0-eks-a-26
       metadata:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api/manifests/infrastructure-docker/v1.2.0/metadata.yaml
       version: v1.2.0+af7c54b
@@ -1828,7 +1828,7 @@ spec:
         imageDigest: sha256:a4cc8731d11794a9c43595aaa80422f239586ac007ae351e1e36b251ae4830f8
         name: kind-node
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kubernetes-sigs/kind/node:v1.23.15-eks-d-1-23-12-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kubernetes-sigs/kind/node:v1.23.15-eks-d-1-23-12-eks-a-26
       kubeVersion: v1.23.15
       manifestUrl: https://distro.eks.amazonaws.com/kubernetes-1-23/kubernetes-1-23-eks-12.yaml
       name: kubernetes-1-23-eks-12
@@ -1863,7 +1863,7 @@ spec:
         imageDigest: sha256:a024605f429ae85c5b0751b3a7929824de7a99477e6134c99677fd614b387f65
         name: eks-anywhere-cli-tools
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/cli-tools:v0.14.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/cli-tools:v0.14.0-eks-a-26
       clusterController:
         arch:
         - amd64
@@ -1872,7 +1872,7 @@ spec:
         imageDigest: sha256:576c01d68bde60e9ada7bb56bbe2f0f64394c7aac8b2bbb686f974ef63911cf9
         name: eks-anywhere-cluster-controller
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/cluster-controller:v0.14.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/cluster-controller:v0.14.0-eks-a-26
       components:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/eks-anywhere/manifests/cluster-controller/v0.14.0/eksa-components.yaml
       diagnosticCollector:
@@ -1883,7 +1883,7 @@ spec:
         imageDigest: sha256:7bb784289bf9fe416b7fa9a58ef7f06d97ee0a18b94793aca5a188dee92e3a2f
         name: eks-anywhere-diagnostic-collector
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/diagnostic-collector:v0.14.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/diagnostic-collector:v0.14.0-eks-a-26
       version: v0.14.0+635e2f8
     etcdadmBootstrap:
       components:
@@ -1896,7 +1896,7 @@ spec:
         imageDigest: sha256:6077295d1a131aa4a96e94b90ed4cfea3e967244fb62daf7e5b10bda8b881aa0
         name: etcdadm-bootstrap-provider
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/aws/etcdadm-bootstrap-provider:v1.0.5-rc3-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/aws/etcdadm-bootstrap-provider:v1.0.5-rc3-eks-a-26
       kubeProxy:
         arch:
         - amd64
@@ -1905,7 +1905,7 @@ spec:
         imageDigest: sha256:172caff0d99616c3c5fc38b8490f061bb8a1c4080ea45e07231e46a30c079209
         name: kube-rbac-proxy
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
       metadata:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/etcdadm-bootstrap-provider/manifests/bootstrap-etcdadm-bootstrap/v1.0.5-rc3/metadata.yaml
       version: v1.0.5-rc3+e21737f
@@ -1920,7 +1920,7 @@ spec:
         imageDigest: sha256:c5a65c440d36085674c83305e0ac45879d68793ae81b8ceff85e8832e8193738
         name: etcdadm-controller
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/aws/etcdadm-controller:v1.0.4-rc4-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/aws/etcdadm-controller:v1.0.4-rc4-eks-a-26
       kubeProxy:
         arch:
         - amd64
@@ -1929,7 +1929,7 @@ spec:
         imageDigest: sha256:172caff0d99616c3c5fc38b8490f061bb8a1c4080ea45e07231e46a30c079209
         name: kube-rbac-proxy
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
       metadata:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/etcdadm-controller/manifests/bootstrap-etcdadm-controller/v1.0.4-rc4/metadata.yaml
       version: v1.0.4-rc4+425d719
@@ -1942,7 +1942,7 @@ spec:
         imageDigest: sha256:3e09a1c2bfc8d2ac95b610d53d96b0e6ed8aed2ddc8ebec4c06e8a5c632880ad
         name: helm-controller
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/fluxcd/helm-controller:v0.22.2-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/fluxcd/helm-controller:v0.22.2-eks-a-26
       kustomizeController:
         arch:
         - amd64
@@ -1951,7 +1951,7 @@ spec:
         imageDigest: sha256:efcf4b0dd083c450444172806c1ca606fbe3ad0bd57baaefd812d28fbb347c27
         name: kustomize-controller
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/fluxcd/kustomize-controller:v0.26.3-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/fluxcd/kustomize-controller:v0.26.3-eks-a-26
       notificationController:
         arch:
         - amd64
@@ -1960,7 +1960,7 @@ spec:
         imageDigest: sha256:448e4bfbf21b8b3d70cf6a61efee2839c364339b7514b56e542e2851789b5b82
         name: notification-controller
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/fluxcd/notification-controller:v0.24.1-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/fluxcd/notification-controller:v0.24.1-eks-a-26
       sourceController:
         arch:
         - amd64
@@ -1969,7 +1969,7 @@ spec:
         imageDigest: sha256:7fb054a18d0b84b31569293bb7042e693a90cae46f4397d67d4980f95eba5e9f
         name: source-controller
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/fluxcd/source-controller:v0.25.9-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/fluxcd/source-controller:v0.25.9-eks-a-26
       version: v0.31.3+9ff63c4
     haproxy:
       image:
@@ -1980,7 +1980,7 @@ spec:
         imageDigest: sha256:5d439a352a42cddd11e6b2c9f0a738f1d6dfd962340bd89ed21d4718ef4ac4a4
         name: haproxy
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kubernetes-sigs/kind/haproxy:v0.17.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kubernetes-sigs/kind/haproxy:v0.17.0-eks-a-26
     kindnetd:
       manifest:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/kind/manifests/kindnetd/v0.17.0/kindnetd.yaml
@@ -1995,7 +1995,7 @@ spec:
         imageDigest: sha256:3399c03825bd7ce2e90e480c2061cc361dc2afc3b00c1bd60a900ce5f47ec338
         name: cluster-api-provider-nutanix
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/nutanix-cloud-native/cluster-api-provider-nutanix:v1.1.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/nutanix-cloud-native/cluster-api-provider-nutanix:v1.1.0-eks-a-26
       clusterTemplate:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api-provider-nutanix/manifests/infrastructure-nutanix/v1.1.0/cluster-template.yaml
       components:
@@ -2008,7 +2008,7 @@ spec:
         imageDigest: sha256:48e9c1e6e1ae5a943cccf6def867c67f1b576fc191f4ac757cd007f345b0f4d0
         name: kube-vip
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kube-vip/kube-vip:v0.5.5-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kube-vip/kube-vip:v0.5.5-eks-a-26
       metadata:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api-provider-nutanix/manifests/infrastructure-nutanix/v1.1.0/metadata.yaml
       version: v1.1.0+28cafb5
@@ -2017,7 +2017,7 @@ spec:
         description: Helm chart for eks-anywhere-packages
         imageDigest: sha256:fb1794cae7960530f384704849d57631bd4e0df9869992046872c2dcb9ba43ef
         name: eks-anywhere-packages
-        uri: 10.136.0.2:443/eks-anywhere/eks-anywhere-packages:0.2.28-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/eks-anywhere-packages:0.2.28-eks-a-26
       packageController:
         arch:
         - amd64
@@ -2026,7 +2026,7 @@ spec:
         imageDigest: sha256:5ec8608552cdf7410a8a679901a12a9e59a643f461859640821520d8757725af
         name: eks-anywhere-packages
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/eks-anywhere-packages:v0.2.28-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/eks-anywhere-packages:v0.2.28-eks-a-26
       tokenRefresher:
         arch:
         - amd64
@@ -2035,7 +2035,7 @@ spec:
         imageDigest: sha256:08b696bb98f687e1081d487cf17c6bff4a47928bdacc4d9f341d49224601fcdd
         name: ecr-token-refresher
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/ecr-token-refresher:v0.2.28-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/ecr-token-refresher:v0.2.28-eks-a-26
       version: v0.2.28+657c319
     snow:
       bottlerocketBootstrapSnow:
@@ -2046,7 +2046,7 @@ spec:
         imageDigest: sha256:a64aad66540f7d51068413c92bd9c351bb17399ec4a638ca599ec4a9018e74db
         name: bottlerocket-bootstrap-snow
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/bottlerocket-bootstrap-snow:v1-23-12-eks-a-26
+        uri: 10.136.0.2:5000/eks-anywhere/bottlerocket-bootstrap-snow:v1-23-12-eks-a-26
       components:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api-provider-aws-snow/manifests/infrastructure-snow/v0.1.21/infrastructure-components.yaml
       kubeVip:
@@ -2057,7 +2057,7 @@ spec:
         imageDigest: sha256:48e9c1e6e1ae5a943cccf6def867c67f1b576fc191f4ac757cd007f345b0f4d0
         name: kube-vip
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kube-vip/kube-vip:v0.5.5-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kube-vip/kube-vip:v0.5.5-eks-a-26
       manager:
         arch:
         - amd64
@@ -2066,7 +2066,7 @@ spec:
         imageDigest: sha256:2748b3427cf14a9bb5710fd946096c25b05ade5025512d03afd655a220ee55bf
         name: cluster-api-snow-controller
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/aws/cluster-api-provider-aws-snow/manager:v0.1.21-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/aws/cluster-api-provider-aws-snow/manager:v0.1.21-eks-a-26
       metadata:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api-provider-aws-snow/manifests/infrastructure-snow/v0.1.21/metadata.yaml
       version: v0.1.21+474c4af
@@ -2079,7 +2079,7 @@ spec:
         imageDigest: sha256:e61ee865af4e2d4248f30929238ee80f4367f7a44ba4cff03fa362b103c6543c
         name: cluster-api-provider-tinkerbell
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/tinkerbell/cluster-api-provider-tinkerbell:9e9c2a397288908f73a4f499ac00aaf96d15deb6-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/tinkerbell/cluster-api-provider-tinkerbell:9e9c2a397288908f73a4f499ac00aaf96d15deb6-eks-a-26
       clusterTemplate:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api-provider-tinkerbell/manifests/infrastructure-tinkerbell/9e9c2a397288908f73a4f499ac00aaf96d15deb6/cluster-template.yaml
       components:
@@ -2092,7 +2092,7 @@ spec:
         imageDigest: sha256:bcdbf94785d7dd6b3fc6aad616672baba6e42c22286cd7b9cfbec0c4da81ea7c
         name: envoy
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/envoyproxy/envoy:v1.22.2.0-prod-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/envoyproxy/envoy:v1.22.2.0-prod-eks-a-26
       kubeVip:
         arch:
         - amd64
@@ -2101,7 +2101,7 @@ spec:
         imageDigest: sha256:48e9c1e6e1ae5a943cccf6def867c67f1b576fc191f4ac757cd007f345b0f4d0
         name: kube-vip
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kube-vip/kube-vip:v0.5.5-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kube-vip/kube-vip:v0.5.5-eks-a-26
       metadata:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api-provider-tinkerbell/manifests/infrastructure-tinkerbell/9e9c2a397288908f73a4f499ac00aaf96d15deb6/metadata.yaml
       tinkerbellStack:
@@ -2114,7 +2114,7 @@ spec:
             imageDigest: sha256:ec75a43a956793fd53b77723f464b69b9c4a27675dedd99fdb1ce74d74691c7d
             name: cexec
             os: linux
-            uri: 10.136.0.2:443/eks-anywhere/tinkerbell/hub/cexec:6c0f0d437bde2c836d90b000312c8b25fa1b65e1-eks-a-26
+            uri: public.ecr.aws/eks-anywhere/tinkerbell/hub/cexec:6c0f0d437bde2c836d90b000312c8b25fa1b65e1-eks-a-26
           imageToDisk:
             arch:
             - amd64
@@ -2123,7 +2123,7 @@ spec:
             imageDigest: sha256:73359e8afe20ec1d7316d09d45fe9a8cad67feb8b701869e63e4bf67f14f4695
             name: image2disk
             os: linux
-            uri: 10.136.0.2:443/eks-anywhere/tinkerbell/hub/image2disk:6c0f0d437bde2c836d90b000312c8b25fa1b65e1-eks-a-26
+            uri: public.ecr.aws/eks-anywhere/tinkerbell/hub/image2disk:6c0f0d437bde2c836d90b000312c8b25fa1b65e1-eks-a-26
           kexec:
             arch:
             - amd64
@@ -2132,7 +2132,7 @@ spec:
             imageDigest: sha256:dc67cfb29bdd05d47562c71a0bc4786897e704aea95a26ecd30eff9f9f7c2eeb
             name: kexec
             os: linux
-            uri: 10.136.0.2:443/eks-anywhere/tinkerbell/hub/kexec:6c0f0d437bde2c836d90b000312c8b25fa1b65e1-eks-a-26
+            uri: public.ecr.aws/eks-anywhere/tinkerbell/hub/kexec:6c0f0d437bde2c836d90b000312c8b25fa1b65e1-eks-a-26
           ociToDisk:
             arch:
             - amd64
@@ -2141,7 +2141,7 @@ spec:
             imageDigest: sha256:d301c4ce6622a55d8d36f0196d322c7d31c0bb04f9c3ec56d71b2ba99703ac3e
             name: oci2disk
             os: linux
-            uri: 10.136.0.2:443/eks-anywhere/tinkerbell/hub/oci2disk:6c0f0d437bde2c836d90b000312c8b25fa1b65e1-eks-a-26
+            uri: public.ecr.aws/eks-anywhere/tinkerbell/hub/oci2disk:6c0f0d437bde2c836d90b000312c8b25fa1b65e1-eks-a-26
           reboot:
             arch:
             - amd64
@@ -2150,7 +2150,7 @@ spec:
             imageDigest: sha256:f0387cc7dda122ca70045234d268a1e92eb7f5e4e862a38322bc5413aab68215
             name: reboot
             os: linux
-            uri: 10.136.0.2:443/eks-anywhere/tinkerbell/hub/reboot:6c0f0d437bde2c836d90b000312c8b25fa1b65e1-eks-a-26
+            uri: public.ecr.aws/eks-anywhere/tinkerbell/hub/reboot:6c0f0d437bde2c836d90b000312c8b25fa1b65e1-eks-a-26
           writeFile:
             arch:
             - amd64
@@ -2159,7 +2159,7 @@ spec:
             imageDigest: sha256:0002c7fca533ccc76538c7b982e555a12674e6f46017e01d3806a4bae643b2a3
             name: writefile
             os: linux
-            uri: 10.136.0.2:443/eks-anywhere/tinkerbell/hub/writefile:6c0f0d437bde2c836d90b000312c8b25fa1b65e1-eks-a-26
+            uri: public.ecr.aws/eks-anywhere/tinkerbell/hub/writefile:6c0f0d437bde2c836d90b000312c8b25fa1b65e1-eks-a-26
         boots:
           arch:
           - amd64
@@ -2168,7 +2168,7 @@ spec:
           imageDigest: sha256:d14b66d7ef18220872c629b4a21bbb69a5495c8c74755931b711e1dac572d589
           name: boots
           os: linux
-          uri: 10.136.0.2:443/eks-anywhere/tinkerbell/boots:79b1d9acb65dfd0527b44800eddbdcf6b751c8d8-eks-a-26
+          uri: public.ecr.aws/eks-anywhere/tinkerbell/boots:79b1d9acb65dfd0527b44800eddbdcf6b751c8d8-eks-a-26
         hegel:
           arch:
           - amd64
@@ -2177,7 +2177,7 @@ spec:
           imageDigest: sha256:997f3adab9ecac1151aec19a4785d51fedf3f26e629b9936b5e6f8d6aa605611
           name: hegel
           os: linux
-          uri: 10.136.0.2:443/eks-anywhere/tinkerbell/hegel:7b286fdc8e8fa91a6e9a179a5494b6ee29fce17b-eks-a-26
+          uri: public.ecr.aws/eks-anywhere/tinkerbell/hegel:7b286fdc8e8fa91a6e9a179a5494b6ee29fce17b-eks-a-26
         hook:
           bootkit:
             arch:
@@ -2187,7 +2187,7 @@ spec:
             imageDigest: sha256:a1ff9f60e05a76ddf16b5d55476f5a43935a1422423353362187f8a7a2a3e4d3
             name: hook-bootkit
             os: linux
-            uri: 10.136.0.2:443/eks-anywhere/tinkerbell/hook-bootkit:6d43b8b331c7a389f3ffeaa388fa9aa98248d7a2-eks-a-26
+            uri: public.ecr.aws/eks-anywhere/tinkerbell/hook-bootkit:6d43b8b331c7a389f3ffeaa388fa9aa98248d7a2-eks-a-26
           docker:
             arch:
             - amd64
@@ -2196,7 +2196,7 @@ spec:
             imageDigest: sha256:01bc24bed4532587110c6320ba8201063645ef8f2af519f4d07c6132f01c8923
             name: hook-docker
             os: linux
-            uri: 10.136.0.2:443/eks-anywhere/tinkerbell/hook-docker:6d43b8b331c7a389f3ffeaa388fa9aa98248d7a2-eks-a-26
+            uri: public.ecr.aws/eks-anywhere/tinkerbell/hook-docker:6d43b8b331c7a389f3ffeaa388fa9aa98248d7a2-eks-a-26
           initramfs:
             amd:
               description: Tinkerbell operating system installation environment (osie)
@@ -2216,7 +2216,7 @@ spec:
             imageDigest: sha256:0467274361bac7488d4191bcfa89736dbddb497e637cbdc4f214497b089f9827
             name: hook-kernel
             os: linux
-            uri: 10.136.0.2:443/eks-anywhere/tinkerbell/hook-kernel:6d43b8b331c7a389f3ffeaa388fa9aa98248d7a2-eks-a-26
+            uri: public.ecr.aws/eks-anywhere/tinkerbell/hook-kernel:6d43b8b331c7a389f3ffeaa388fa9aa98248d7a2-eks-a-26
           vmlinuz:
             amd:
               description: Tinkerbell operating system installation environment (osie)
@@ -2236,7 +2236,7 @@ spec:
           imageDigest: sha256:e7d7074164b3f88b35e343f7dbd973a55c6581d3d13c3d542ed2b66039ce0761
           name: rufio
           os: linux
-          uri: 10.136.0.2:443/eks-anywhere/tinkerbell/rufio:a4053e5c1e7f32fb5c0a9962846c219c3ef8aaf3-eks-a-26
+          uri: public.ecr.aws/eks-anywhere/tinkerbell/rufio:a4053e5c1e7f32fb5c0a9962846c219c3ef8aaf3-eks-a-26
         tink:
           tinkController:
             arch:
@@ -2246,7 +2246,7 @@ spec:
             imageDigest: sha256:3066b307aaf7c224d0fbd83a71b0ee0622860bdd2679cf87feb62d407b23d125
             name: tink-controller
             os: linux
-            uri: 10.136.0.2:443/eks-anywhere/tinkerbell/tink/tink-controller:19b68beab1a902846c10ee3422cafb4fd5c3307e-eks-a-26
+            uri: public.ecr.aws/eks-anywhere/tinkerbell/tink/tink-controller:19b68beab1a902846c10ee3422cafb4fd5c3307e-eks-a-26
           tinkServer:
             arch:
             - amd64
@@ -2255,7 +2255,7 @@ spec:
             imageDigest: sha256:dcc91a1e4c98b32eb144cf6b9703c9c30abd0f23b3b7e08e71440630b1ab0a3f
             name: tink-server
             os: linux
-            uri: 10.136.0.2:443/eks-anywhere/tinkerbell/tink/tink-server:19b68beab1a902846c10ee3422cafb4fd5c3307e-eks-a-26
+            uri: public.ecr.aws/eks-anywhere/tinkerbell/tink/tink-server:19b68beab1a902846c10ee3422cafb4fd5c3307e-eks-a-26
           tinkWorker:
             arch:
             - amd64
@@ -2264,12 +2264,12 @@ spec:
             imageDigest: sha256:368785248ccb27b87d01a7551b760558f8bb4f8f082a5c1be2233535c4600290
             name: tink-worker
             os: linux
-            uri: 10.136.0.2:443/eks-anywhere/tinkerbell/tink/tink-worker:19b68beab1a902846c10ee3422cafb4fd5c3307e-eks-a-26
+            uri: public.ecr.aws/eks-anywhere/tinkerbell/tink/tink-worker:19b68beab1a902846c10ee3422cafb4fd5c3307e-eks-a-26
         tinkerbellChart:
           description: Helm chart for tinkerbell-chart
           imageDigest: sha256:55709c26c4869e5099f0bac318f1f26d8da94083278e4e4dce6a844734506d3f
           name: tinkerbell-chart
-          uri: 10.136.0.2:443/eks-anywhere/tinkerbell/tinkerbell-chart:0.1.6-eks-a-26
+          uri: public.ecr.aws/eks-anywhere/tinkerbell/tinkerbell-chart:0.1.6-eks-a-26
       version: v0.1.0
     vSphere:
       clusterAPIController:
@@ -2280,7 +2280,7 @@ spec:
         imageDigest: sha256:24d151efd8c46e41608a9208e54f61708cfa7cc5e61e36a0417972213057fd99
         name: cluster-api-provider-vsphere
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kubernetes-sigs/cluster-api-provider-vsphere/release/manager:v1.3.1-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kubernetes-sigs/cluster-api-provider-vsphere/release/manager:v1.3.1-eks-a-26
       clusterTemplate:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api-provider-vsphere/manifests/infrastructure-vsphere/v1.3.1/cluster-template.yaml
       components:
@@ -2293,7 +2293,7 @@ spec:
         imageDigest: sha256:60b86d68b6701da0f20c1362d5bf7b81b1532cacfdf618dea2c45ea70f0585ec
         name: vsphere-csi-driver
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kubernetes-sigs/vsphere-csi-driver/csi/driver:v2.2.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kubernetes-sigs/vsphere-csi-driver/csi/driver:v2.2.0-eks-a-26
       kubeProxy:
         arch:
         - amd64
@@ -2302,7 +2302,7 @@ spec:
         imageDigest: sha256:172caff0d99616c3c5fc38b8490f061bb8a1c4080ea45e07231e46a30c079209
         name: kube-rbac-proxy
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
       kubeVip:
         arch:
         - amd64
@@ -2311,7 +2311,7 @@ spec:
         imageDigest: sha256:48e9c1e6e1ae5a943cccf6def867c67f1b576fc191f4ac757cd007f345b0f4d0
         name: kube-vip
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kube-vip/kube-vip:v0.5.5-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kube-vip/kube-vip:v0.5.5-eks-a-26
       manager:
         arch:
         - amd64
@@ -2320,7 +2320,7 @@ spec:
         imageDigest: sha256:08fd0f0eea20ee957b5dd69de86428965153d4a5a9bc45a8ace60824b53bc2ed
         name: cloud-provider-vsphere
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kubernetes/cloud-provider-vsphere/cpi/manager:v1.23.1-eks-d-1-23-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kubernetes/cloud-provider-vsphere/cpi/manager:v1.23.1-eks-d-1-23-eks-a-26
       metadata:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api-provider-vsphere/manifests/infrastructure-vsphere/v1.3.1/metadata.yaml
       syncer:
@@ -2331,7 +2331,7 @@ spec:
         imageDigest: sha256:e252b76321c5404e5396acf90722758411ef31912ed0f37b5dfb6bfe9e195b60
         name: vsphere-csi-syncer
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kubernetes-sigs/vsphere-csi-driver/csi/syncer:v2.2.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kubernetes-sigs/vsphere-csi-driver/csi/syncer:v2.2.0-eks-a-26
       version: v1.3.1+56d0552
   - bootstrap:
       components:
@@ -2344,7 +2344,7 @@ spec:
         imageDigest: sha256:bf189966564988af80655c2f2eb4acc7f880b465dedb5e9aacaa5b569a87466e
         name: kubeadm-bootstrap-controller
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kubernetes-sigs/cluster-api/kubeadm-bootstrap-controller:v1.2.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kubernetes-sigs/cluster-api/kubeadm-bootstrap-controller:v1.2.0-eks-a-26
       kubeProxy:
         arch:
         - amd64
@@ -2353,7 +2353,7 @@ spec:
         imageDigest: sha256:172caff0d99616c3c5fc38b8490f061bb8a1c4080ea45e07231e46a30c079209
         name: kube-rbac-proxy
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
       metadata:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api/manifests/bootstrap-kubeadm/v1.2.0/metadata.yaml
       version: v1.2.0+99a3807
@@ -2365,7 +2365,7 @@ spec:
         imageDigest: sha256:bf56c9712189f5fc65d35544e2a84d3a7a1a2c05f2840fab54c57e8a3f8b57a4
         name: bottlerocket-admin
         os: linux
-        uri: 10.136.0.2:443/bottlerocket/bottlerocket-admin:v0.9.2
+        uri: public.ecr.aws/bottlerocket/bottlerocket-admin:v0.9.2
       control:
         arch:
         - amd64
@@ -2373,7 +2373,7 @@ spec:
         imageDigest: sha256:a8f8f30ed6bd3f4848cf79d19f6c31d60b9c898649e7ee1d3081dac4a36421a7
         name: bottlerocket-control
         os: linux
-        uri: 10.136.0.2:443/bottlerocket/bottlerocket-control:v0.6.3
+        uri: public.ecr.aws/bottlerocket/bottlerocket-control:v0.6.3
       kubeadmBootstrap:
         arch:
         - amd64
@@ -2382,7 +2382,7 @@ spec:
         imageDigest: sha256:447e9d2cb972f818b193641dfdd7383ff23eabb6aa569fc7a1a8c6c886c8dd14
         name: bottlerocket-bootstrap
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/bottlerocket-bootstrap:v1-24-7-eks-a-26
+        uri: 10.136.0.2:5000/eks-anywhere/bottlerocket-bootstrap:v1-24-7-eks-a-26
     certManager:
       acmesolver:
         arch:
@@ -2392,7 +2392,7 @@ spec:
         imageDigest: sha256:9297f8d98a49ad7b53e49923e84b32adb335268b6c45bbd61d9f8f286f7245b4
         name: cert-manager-acmesolver
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/cert-manager/cert-manager-acmesolver:v1.9.1-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/cert-manager/cert-manager-acmesolver:v1.9.1-eks-a-26
       cainjector:
         arch:
         - amd64
@@ -2401,7 +2401,7 @@ spec:
         imageDigest: sha256:29a4d7a3ea5a2c030f4448afe46b20acfce9314791dd681db8b09e99bae8fe89
         name: cert-manager-cainjector
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/cert-manager/cert-manager-cainjector:v1.9.1-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/cert-manager/cert-manager-cainjector:v1.9.1-eks-a-26
       controller:
         arch:
         - amd64
@@ -2410,7 +2410,7 @@ spec:
         imageDigest: sha256:b16b58ee27ea58e36cb49f7615824a2ef8f8c0aa3ed47ebc23d195113d9138dd
         name: cert-manager-controller
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/cert-manager/cert-manager-controller:v1.9.1-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/cert-manager/cert-manager-controller:v1.9.1-eks-a-26
       ctl:
         arch:
         - amd64
@@ -2419,7 +2419,7 @@ spec:
         imageDigest: sha256:fe7e77437832867a9c8c243aba8c9b8f2c33eccf1a798670fe8a449edc3dfe2e
         name: cert-manager-ctl
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/cert-manager/cert-manager-ctl:v1.9.1-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/cert-manager/cert-manager-ctl:v1.9.1-eks-a-26
       manifest:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cert-manager/manifests/v1.9.1/cert-manager.yaml
       version: v1.9.1+7bb5e2b
@@ -2431,7 +2431,7 @@ spec:
         imageDigest: sha256:9ece2181eedef5626f7d392f40e9914302868c1f5e5fa91276fdb1558be1c1d5
         name: cert-manager-webhook
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/cert-manager/cert-manager-webhook:v1.9.1-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/cert-manager/cert-manager-webhook:v1.9.1-eks-a-26
     cilium:
       cilium:
         arch:
@@ -2440,12 +2440,12 @@ spec:
         imageDigest: sha256:197b3706173bffc9563f7211788dfd326a36d1ac99d04c42357f80b7143da0d7
         name: cilium
         os: linux
-        uri: 10.136.0.2:443/isovalent/cilium:v1.11.10-eksa.2
+        uri: public.ecr.aws/isovalent/cilium:v1.11.10-eksa.2
       helmChart:
         description: Helm chart for cilium-chart
         imageDigest: sha256:252241c7986b52a4bec31c50e31daf349374b730dcb8aaa6db3a2b1cb025ff7c
         name: cilium-chart
-        uri: 10.136.0.2:443/isovalent/cilium:1.11.10-eksa.2
+        uri: public.ecr.aws/isovalent/cilium:1.11.10-eksa.2
       manifest:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cilium/manifests/cilium/v1.11.10-eksa.2/cilium.yaml
       operator:
@@ -2455,7 +2455,7 @@ spec:
         imageDigest: sha256:ec2677f33c9aa9b6a8f600314c718a913eb1f0d0006a991f69ee0a775bb29e14
         name: operator-generic
         os: linux
-        uri: 10.136.0.2:443/isovalent/operator-generic:v1.11.10-eksa.2
+        uri: public.ecr.aws/isovalent/operator-generic:v1.11.10-eksa.2
       version: v1.11.10-eksa.2
     cloudStack:
       clusterAPIController:
@@ -2466,7 +2466,7 @@ spec:
         imageDigest: sha256:1a31dd9c520d4081a039b275ed75b0a694632d6a83a6e8c3b0caf2e3a78086e2
         name: cluster-api-provider-cloudstack
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kubernetes-sigs/cluster-api-provider-cloudstack/release/manager:v0.4.9-rc4-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kubernetes-sigs/cluster-api-provider-cloudstack/release/manager:v0.4.9-rc4-eks-a-26
       components:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api-provider-cloudstack/manifests/infrastructure-cloudstack/v0.4.9-rc4/infrastructure-components.yaml
       kubeRbacProxy:
@@ -2477,7 +2477,7 @@ spec:
         imageDigest: sha256:172caff0d99616c3c5fc38b8490f061bb8a1c4080ea45e07231e46a30c079209
         name: kube-rbac-proxy
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
       kubeVip:
         arch:
         - amd64
@@ -2486,7 +2486,7 @@ spec:
         imageDigest: sha256:48e9c1e6e1ae5a943cccf6def867c67f1b576fc191f4ac757cd007f345b0f4d0
         name: kube-vip
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kube-vip/kube-vip:v0.5.5-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kube-vip/kube-vip:v0.5.5-eks-a-26
       metadata:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api-provider-cloudstack/manifests/infrastructure-cloudstack/v0.4.9-rc4/metadata.yaml
       version: v0.4.9-rc4+fec458f
@@ -2501,7 +2501,7 @@ spec:
         imageDigest: sha256:1d5d49d6653ca89275b36c3ee23c0c0e0ad908b9db70242d77ab549dd367fd3f
         name: cluster-api-controller
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kubernetes-sigs/cluster-api/cluster-api-controller:v1.2.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kubernetes-sigs/cluster-api/cluster-api-controller:v1.2.0-eks-a-26
       kubeProxy:
         arch:
         - amd64
@@ -2510,7 +2510,7 @@ spec:
         imageDigest: sha256:172caff0d99616c3c5fc38b8490f061bb8a1c4080ea45e07231e46a30c079209
         name: kube-rbac-proxy
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
       metadata:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api/manifests/cluster-api/v1.2.0/metadata.yaml
       version: v1.2.0+73969a7
@@ -2525,7 +2525,7 @@ spec:
         imageDigest: sha256:98744ce8a528ee59bea888a5cf27e197aec01022307596e367b8348bae7e34f7
         name: kubeadm-control-plane-controller
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kubernetes-sigs/cluster-api/kubeadm-control-plane-controller:v1.2.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kubernetes-sigs/cluster-api/kubeadm-control-plane-controller:v1.2.0-eks-a-26
       kubeProxy:
         arch:
         - amd64
@@ -2534,7 +2534,7 @@ spec:
         imageDigest: sha256:172caff0d99616c3c5fc38b8490f061bb8a1c4080ea45e07231e46a30c079209
         name: kube-rbac-proxy
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
       metadata:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api/manifests/control-plane-kubeadm/v1.2.0/metadata.yaml
       version: v1.2.0+5f68de4
@@ -2551,7 +2551,7 @@ spec:
         imageDigest: sha256:172caff0d99616c3c5fc38b8490f061bb8a1c4080ea45e07231e46a30c079209
         name: kube-rbac-proxy
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
       manager:
         arch:
         - amd64
@@ -2560,7 +2560,7 @@ spec:
         imageDigest: sha256:64b587d69a0863fdaedfe564d89d76a8e72157d1887d8246d1edaadb8e062b38
         name: cluster-api-provider-docker
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kubernetes-sigs/cluster-api/capd-manager:v1.2.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kubernetes-sigs/cluster-api/capd-manager:v1.2.0-eks-a-26
       metadata:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api/manifests/infrastructure-docker/v1.2.0/metadata.yaml
       version: v1.2.0+af7c54b
@@ -2603,7 +2603,7 @@ spec:
         imageDigest: sha256:08d2fba8fef85dbe58abe0978bfda8ea31e97554dc0ffec40e71c6c78176f6bb
         name: kind-node
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kubernetes-sigs/kind/node:v1.24.9-eks-d-1-24-7-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kubernetes-sigs/kind/node:v1.24.9-eks-d-1-24-7-eks-a-26
       kubeVersion: v1.24.9
       manifestUrl: https://distro.eks.amazonaws.com/kubernetes-1-24/kubernetes-1-24-eks-7.yaml
       name: kubernetes-1-24-eks-7
@@ -2638,7 +2638,7 @@ spec:
         imageDigest: sha256:a024605f429ae85c5b0751b3a7929824de7a99477e6134c99677fd614b387f65
         name: eks-anywhere-cli-tools
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/cli-tools:v0.14.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/cli-tools:v0.14.0-eks-a-26
       clusterController:
         arch:
         - amd64
@@ -2647,7 +2647,7 @@ spec:
         imageDigest: sha256:576c01d68bde60e9ada7bb56bbe2f0f64394c7aac8b2bbb686f974ef63911cf9
         name: eks-anywhere-cluster-controller
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/cluster-controller:v0.14.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/cluster-controller:v0.14.0-eks-a-26
       components:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/eks-anywhere/manifests/cluster-controller/v0.14.0/eksa-components.yaml
       diagnosticCollector:
@@ -2658,7 +2658,7 @@ spec:
         imageDigest: sha256:7bb784289bf9fe416b7fa9a58ef7f06d97ee0a18b94793aca5a188dee92e3a2f
         name: eks-anywhere-diagnostic-collector
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/diagnostic-collector:v0.14.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/diagnostic-collector:v0.14.0-eks-a-26
       version: v0.14.0+635e2f8
     etcdadmBootstrap:
       components:
@@ -2671,7 +2671,7 @@ spec:
         imageDigest: sha256:6077295d1a131aa4a96e94b90ed4cfea3e967244fb62daf7e5b10bda8b881aa0
         name: etcdadm-bootstrap-provider
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/aws/etcdadm-bootstrap-provider:v1.0.5-rc3-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/aws/etcdadm-bootstrap-provider:v1.0.5-rc3-eks-a-26
       kubeProxy:
         arch:
         - amd64
@@ -2680,7 +2680,7 @@ spec:
         imageDigest: sha256:172caff0d99616c3c5fc38b8490f061bb8a1c4080ea45e07231e46a30c079209
         name: kube-rbac-proxy
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
       metadata:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/etcdadm-bootstrap-provider/manifests/bootstrap-etcdadm-bootstrap/v1.0.5-rc3/metadata.yaml
       version: v1.0.5-rc3+e21737f
@@ -2695,7 +2695,7 @@ spec:
         imageDigest: sha256:c5a65c440d36085674c83305e0ac45879d68793ae81b8ceff85e8832e8193738
         name: etcdadm-controller
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/aws/etcdadm-controller:v1.0.4-rc4-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/aws/etcdadm-controller:v1.0.4-rc4-eks-a-26
       kubeProxy:
         arch:
         - amd64
@@ -2704,7 +2704,7 @@ spec:
         imageDigest: sha256:172caff0d99616c3c5fc38b8490f061bb8a1c4080ea45e07231e46a30c079209
         name: kube-rbac-proxy
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
       metadata:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/etcdadm-controller/manifests/bootstrap-etcdadm-controller/v1.0.4-rc4/metadata.yaml
       version: v1.0.4-rc4+425d719
@@ -2717,7 +2717,7 @@ spec:
         imageDigest: sha256:3e09a1c2bfc8d2ac95b610d53d96b0e6ed8aed2ddc8ebec4c06e8a5c632880ad
         name: helm-controller
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/fluxcd/helm-controller:v0.22.2-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/fluxcd/helm-controller:v0.22.2-eks-a-26
       kustomizeController:
         arch:
         - amd64
@@ -2726,7 +2726,7 @@ spec:
         imageDigest: sha256:efcf4b0dd083c450444172806c1ca606fbe3ad0bd57baaefd812d28fbb347c27
         name: kustomize-controller
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/fluxcd/kustomize-controller:v0.26.3-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/fluxcd/kustomize-controller:v0.26.3-eks-a-26
       notificationController:
         arch:
         - amd64
@@ -2735,7 +2735,7 @@ spec:
         imageDigest: sha256:448e4bfbf21b8b3d70cf6a61efee2839c364339b7514b56e542e2851789b5b82
         name: notification-controller
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/fluxcd/notification-controller:v0.24.1-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/fluxcd/notification-controller:v0.24.1-eks-a-26
       sourceController:
         arch:
         - amd64
@@ -2744,7 +2744,7 @@ spec:
         imageDigest: sha256:7fb054a18d0b84b31569293bb7042e693a90cae46f4397d67d4980f95eba5e9f
         name: source-controller
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/fluxcd/source-controller:v0.25.9-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/fluxcd/source-controller:v0.25.9-eks-a-26
       version: v0.31.3+9ff63c4
     haproxy:
       image:
@@ -2755,7 +2755,7 @@ spec:
         imageDigest: sha256:5d439a352a42cddd11e6b2c9f0a738f1d6dfd962340bd89ed21d4718ef4ac4a4
         name: haproxy
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kubernetes-sigs/kind/haproxy:v0.17.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kubernetes-sigs/kind/haproxy:v0.17.0-eks-a-26
     kindnetd:
       manifest:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/kind/manifests/kindnetd/v0.17.0/kindnetd.yaml
@@ -2770,7 +2770,7 @@ spec:
         imageDigest: sha256:3399c03825bd7ce2e90e480c2061cc361dc2afc3b00c1bd60a900ce5f47ec338
         name: cluster-api-provider-nutanix
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/nutanix-cloud-native/cluster-api-provider-nutanix:v1.1.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/nutanix-cloud-native/cluster-api-provider-nutanix:v1.1.0-eks-a-26
       clusterTemplate:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api-provider-nutanix/manifests/infrastructure-nutanix/v1.1.0/cluster-template.yaml
       components:
@@ -2783,7 +2783,7 @@ spec:
         imageDigest: sha256:48e9c1e6e1ae5a943cccf6def867c67f1b576fc191f4ac757cd007f345b0f4d0
         name: kube-vip
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kube-vip/kube-vip:v0.5.5-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kube-vip/kube-vip:v0.5.5-eks-a-26
       metadata:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api-provider-nutanix/manifests/infrastructure-nutanix/v1.1.0/metadata.yaml
       version: v1.1.0+28cafb5
@@ -2792,7 +2792,7 @@ spec:
         description: Helm chart for eks-anywhere-packages
         imageDigest: sha256:fb1794cae7960530f384704849d57631bd4e0df9869992046872c2dcb9ba43ef
         name: eks-anywhere-packages
-        uri: 10.136.0.2:443/eks-anywhere/eks-anywhere-packages:0.2.28-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/eks-anywhere-packages:0.2.28-eks-a-26
       packageController:
         arch:
         - amd64
@@ -2801,7 +2801,7 @@ spec:
         imageDigest: sha256:5ec8608552cdf7410a8a679901a12a9e59a643f461859640821520d8757725af
         name: eks-anywhere-packages
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/eks-anywhere-packages:v0.2.28-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/eks-anywhere-packages:v0.2.28-eks-a-26
       tokenRefresher:
         arch:
         - amd64
@@ -2810,7 +2810,7 @@ spec:
         imageDigest: sha256:08b696bb98f687e1081d487cf17c6bff4a47928bdacc4d9f341d49224601fcdd
         name: ecr-token-refresher
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/ecr-token-refresher:v0.2.28-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/ecr-token-refresher:v0.2.28-eks-a-26
       version: v0.2.28+657c319
     snow:
       bottlerocketBootstrapSnow:
@@ -2821,7 +2821,7 @@ spec:
         imageDigest: sha256:78dbc49a0d26d37251f95db4aa423c9a546943ef88e12763c7a6e3345121b8f2
         name: bottlerocket-bootstrap-snow
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/bottlerocket-bootstrap-snow:v1-24-7-eks-a-26
+        uri: 10.136.0.2:5000/eks-anywhere/bottlerocket-bootstrap-snow:v1-24-7-eks-a-26
       components:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api-provider-aws-snow/manifests/infrastructure-snow/v0.1.21/infrastructure-components.yaml
       kubeVip:
@@ -2832,7 +2832,7 @@ spec:
         imageDigest: sha256:48e9c1e6e1ae5a943cccf6def867c67f1b576fc191f4ac757cd007f345b0f4d0
         name: kube-vip
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kube-vip/kube-vip:v0.5.5-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kube-vip/kube-vip:v0.5.5-eks-a-26
       manager:
         arch:
         - amd64
@@ -2841,7 +2841,7 @@ spec:
         imageDigest: sha256:2748b3427cf14a9bb5710fd946096c25b05ade5025512d03afd655a220ee55bf
         name: cluster-api-snow-controller
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/aws/cluster-api-provider-aws-snow/manager:v0.1.21-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/aws/cluster-api-provider-aws-snow/manager:v0.1.21-eks-a-26
       metadata:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api-provider-aws-snow/manifests/infrastructure-snow/v0.1.21/metadata.yaml
       version: v0.1.21+1edb9ea
@@ -2854,7 +2854,7 @@ spec:
         imageDigest: sha256:e61ee865af4e2d4248f30929238ee80f4367f7a44ba4cff03fa362b103c6543c
         name: cluster-api-provider-tinkerbell
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/tinkerbell/cluster-api-provider-tinkerbell:9e9c2a397288908f73a4f499ac00aaf96d15deb6-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/tinkerbell/cluster-api-provider-tinkerbell:9e9c2a397288908f73a4f499ac00aaf96d15deb6-eks-a-26
       clusterTemplate:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api-provider-tinkerbell/manifests/infrastructure-tinkerbell/9e9c2a397288908f73a4f499ac00aaf96d15deb6/cluster-template.yaml
       components:
@@ -2867,7 +2867,7 @@ spec:
         imageDigest: sha256:bcdbf94785d7dd6b3fc6aad616672baba6e42c22286cd7b9cfbec0c4da81ea7c
         name: envoy
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/envoyproxy/envoy:v1.22.2.0-prod-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/envoyproxy/envoy:v1.22.2.0-prod-eks-a-26
       kubeVip:
         arch:
         - amd64
@@ -2876,7 +2876,7 @@ spec:
         imageDigest: sha256:48e9c1e6e1ae5a943cccf6def867c67f1b576fc191f4ac757cd007f345b0f4d0
         name: kube-vip
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kube-vip/kube-vip:v0.5.5-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kube-vip/kube-vip:v0.5.5-eks-a-26
       metadata:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api-provider-tinkerbell/manifests/infrastructure-tinkerbell/9e9c2a397288908f73a4f499ac00aaf96d15deb6/metadata.yaml
       tinkerbellStack:
@@ -2889,7 +2889,7 @@ spec:
             imageDigest: sha256:ec75a43a956793fd53b77723f464b69b9c4a27675dedd99fdb1ce74d74691c7d
             name: cexec
             os: linux
-            uri: 10.136.0.2:443/eks-anywhere/tinkerbell/hub/cexec:6c0f0d437bde2c836d90b000312c8b25fa1b65e1-eks-a-26
+            uri: public.ecr.aws/eks-anywhere/tinkerbell/hub/cexec:6c0f0d437bde2c836d90b000312c8b25fa1b65e1-eks-a-26
           imageToDisk:
             arch:
             - amd64
@@ -2898,7 +2898,7 @@ spec:
             imageDigest: sha256:73359e8afe20ec1d7316d09d45fe9a8cad67feb8b701869e63e4bf67f14f4695
             name: image2disk
             os: linux
-            uri: 10.136.0.2:443/eks-anywhere/tinkerbell/hub/image2disk:6c0f0d437bde2c836d90b000312c8b25fa1b65e1-eks-a-26
+            uri: public.ecr.aws/eks-anywhere/tinkerbell/hub/image2disk:6c0f0d437bde2c836d90b000312c8b25fa1b65e1-eks-a-26
           kexec:
             arch:
             - amd64
@@ -2907,7 +2907,7 @@ spec:
             imageDigest: sha256:dc67cfb29bdd05d47562c71a0bc4786897e704aea95a26ecd30eff9f9f7c2eeb
             name: kexec
             os: linux
-            uri: 10.136.0.2:443/eks-anywhere/tinkerbell/hub/kexec:6c0f0d437bde2c836d90b000312c8b25fa1b65e1-eks-a-26
+            uri: public.ecr.aws/eks-anywhere/tinkerbell/hub/kexec:6c0f0d437bde2c836d90b000312c8b25fa1b65e1-eks-a-26
           ociToDisk:
             arch:
             - amd64
@@ -2916,7 +2916,7 @@ spec:
             imageDigest: sha256:d301c4ce6622a55d8d36f0196d322c7d31c0bb04f9c3ec56d71b2ba99703ac3e
             name: oci2disk
             os: linux
-            uri: 10.136.0.2:443/eks-anywhere/tinkerbell/hub/oci2disk:6c0f0d437bde2c836d90b000312c8b25fa1b65e1-eks-a-26
+            uri: public.ecr.aws/eks-anywhere/tinkerbell/hub/oci2disk:6c0f0d437bde2c836d90b000312c8b25fa1b65e1-eks-a-26
           reboot:
             arch:
             - amd64
@@ -2925,7 +2925,7 @@ spec:
             imageDigest: sha256:f0387cc7dda122ca70045234d268a1e92eb7f5e4e862a38322bc5413aab68215
             name: reboot
             os: linux
-            uri: 10.136.0.2:443/eks-anywhere/tinkerbell/hub/reboot:6c0f0d437bde2c836d90b000312c8b25fa1b65e1-eks-a-26
+            uri: public.ecr.aws/eks-anywhere/tinkerbell/hub/reboot:6c0f0d437bde2c836d90b000312c8b25fa1b65e1-eks-a-26
           writeFile:
             arch:
             - amd64
@@ -2934,7 +2934,7 @@ spec:
             imageDigest: sha256:0002c7fca533ccc76538c7b982e555a12674e6f46017e01d3806a4bae643b2a3
             name: writefile
             os: linux
-            uri: 10.136.0.2:443/eks-anywhere/tinkerbell/hub/writefile:6c0f0d437bde2c836d90b000312c8b25fa1b65e1-eks-a-26
+            uri: public.ecr.aws/eks-anywhere/tinkerbell/hub/writefile:6c0f0d437bde2c836d90b000312c8b25fa1b65e1-eks-a-26
         boots:
           arch:
           - amd64
@@ -2943,7 +2943,7 @@ spec:
           imageDigest: sha256:d14b66d7ef18220872c629b4a21bbb69a5495c8c74755931b711e1dac572d589
           name: boots
           os: linux
-          uri: 10.136.0.2:443/eks-anywhere/tinkerbell/boots:79b1d9acb65dfd0527b44800eddbdcf6b751c8d8-eks-a-26
+          uri: public.ecr.aws/eks-anywhere/tinkerbell/boots:79b1d9acb65dfd0527b44800eddbdcf6b751c8d8-eks-a-26
         hegel:
           arch:
           - amd64
@@ -2952,7 +2952,7 @@ spec:
           imageDigest: sha256:997f3adab9ecac1151aec19a4785d51fedf3f26e629b9936b5e6f8d6aa605611
           name: hegel
           os: linux
-          uri: 10.136.0.2:443/eks-anywhere/tinkerbell/hegel:7b286fdc8e8fa91a6e9a179a5494b6ee29fce17b-eks-a-26
+          uri: public.ecr.aws/eks-anywhere/tinkerbell/hegel:7b286fdc8e8fa91a6e9a179a5494b6ee29fce17b-eks-a-26
         hook:
           bootkit:
             arch:
@@ -2962,7 +2962,7 @@ spec:
             imageDigest: sha256:a1ff9f60e05a76ddf16b5d55476f5a43935a1422423353362187f8a7a2a3e4d3
             name: hook-bootkit
             os: linux
-            uri: 10.136.0.2:443/eks-anywhere/tinkerbell/hook-bootkit:6d43b8b331c7a389f3ffeaa388fa9aa98248d7a2-eks-a-26
+            uri: public.ecr.aws/eks-anywhere/tinkerbell/hook-bootkit:6d43b8b331c7a389f3ffeaa388fa9aa98248d7a2-eks-a-26
           docker:
             arch:
             - amd64
@@ -2971,7 +2971,7 @@ spec:
             imageDigest: sha256:01bc24bed4532587110c6320ba8201063645ef8f2af519f4d07c6132f01c8923
             name: hook-docker
             os: linux
-            uri: 10.136.0.2:443/eks-anywhere/tinkerbell/hook-docker:6d43b8b331c7a389f3ffeaa388fa9aa98248d7a2-eks-a-26
+            uri: public.ecr.aws/eks-anywhere/tinkerbell/hook-docker:6d43b8b331c7a389f3ffeaa388fa9aa98248d7a2-eks-a-26
           initramfs:
             amd:
               description: Tinkerbell operating system installation environment (osie)
@@ -2991,7 +2991,7 @@ spec:
             imageDigest: sha256:0467274361bac7488d4191bcfa89736dbddb497e637cbdc4f214497b089f9827
             name: hook-kernel
             os: linux
-            uri: 10.136.0.2:443/eks-anywhere/tinkerbell/hook-kernel:6d43b8b331c7a389f3ffeaa388fa9aa98248d7a2-eks-a-26
+            uri: public.ecr.aws/eks-anywhere/tinkerbell/hook-kernel:6d43b8b331c7a389f3ffeaa388fa9aa98248d7a2-eks-a-26
           vmlinuz:
             amd:
               description: Tinkerbell operating system installation environment (osie)
@@ -3011,7 +3011,7 @@ spec:
           imageDigest: sha256:e7d7074164b3f88b35e343f7dbd973a55c6581d3d13c3d542ed2b66039ce0761
           name: rufio
           os: linux
-          uri: 10.136.0.2:443/eks-anywhere/tinkerbell/rufio:a4053e5c1e7f32fb5c0a9962846c219c3ef8aaf3-eks-a-26
+          uri: public.ecr.aws/eks-anywhere/tinkerbell/rufio:a4053e5c1e7f32fb5c0a9962846c219c3ef8aaf3-eks-a-26
         tink:
           tinkController:
             arch:
@@ -3021,7 +3021,7 @@ spec:
             imageDigest: sha256:3066b307aaf7c224d0fbd83a71b0ee0622860bdd2679cf87feb62d407b23d125
             name: tink-controller
             os: linux
-            uri: 10.136.0.2:443/eks-anywhere/tinkerbell/tink/tink-controller:19b68beab1a902846c10ee3422cafb4fd5c3307e-eks-a-26
+            uri: public.ecr.aws/eks-anywhere/tinkerbell/tink/tink-controller:19b68beab1a902846c10ee3422cafb4fd5c3307e-eks-a-26
           tinkServer:
             arch:
             - amd64
@@ -3030,7 +3030,7 @@ spec:
             imageDigest: sha256:dcc91a1e4c98b32eb144cf6b9703c9c30abd0f23b3b7e08e71440630b1ab0a3f
             name: tink-server
             os: linux
-            uri: 10.136.0.2:443/eks-anywhere/tinkerbell/tink/tink-server:19b68beab1a902846c10ee3422cafb4fd5c3307e-eks-a-26
+            uri: public.ecr.aws/eks-anywhere/tinkerbell/tink/tink-server:19b68beab1a902846c10ee3422cafb4fd5c3307e-eks-a-26
           tinkWorker:
             arch:
             - amd64
@@ -3039,12 +3039,12 @@ spec:
             imageDigest: sha256:368785248ccb27b87d01a7551b760558f8bb4f8f082a5c1be2233535c4600290
             name: tink-worker
             os: linux
-            uri: 10.136.0.2:443/eks-anywhere/tinkerbell/tink/tink-worker:19b68beab1a902846c10ee3422cafb4fd5c3307e-eks-a-26
+            uri: public.ecr.aws/eks-anywhere/tinkerbell/tink/tink-worker:19b68beab1a902846c10ee3422cafb4fd5c3307e-eks-a-26
         tinkerbellChart:
           description: Helm chart for tinkerbell-chart
           imageDigest: sha256:55709c26c4869e5099f0bac318f1f26d8da94083278e4e4dce6a844734506d3f
           name: tinkerbell-chart
-          uri: 10.136.0.2:443/eks-anywhere/tinkerbell/tinkerbell-chart:0.1.6-eks-a-26
+          uri: public.ecr.aws/eks-anywhere/tinkerbell/tinkerbell-chart:0.1.6-eks-a-26
       version: v0.1.0
     vSphere:
       clusterAPIController:
@@ -3055,7 +3055,7 @@ spec:
         imageDigest: sha256:24d151efd8c46e41608a9208e54f61708cfa7cc5e61e36a0417972213057fd99
         name: cluster-api-provider-vsphere
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kubernetes-sigs/cluster-api-provider-vsphere/release/manager:v1.3.1-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kubernetes-sigs/cluster-api-provider-vsphere/release/manager:v1.3.1-eks-a-26
       clusterTemplate:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api-provider-vsphere/manifests/infrastructure-vsphere/v1.3.1/cluster-template.yaml
       components:
@@ -3068,7 +3068,7 @@ spec:
         imageDigest: sha256:60b86d68b6701da0f20c1362d5bf7b81b1532cacfdf618dea2c45ea70f0585ec
         name: vsphere-csi-driver
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kubernetes-sigs/vsphere-csi-driver/csi/driver:v2.2.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kubernetes-sigs/vsphere-csi-driver/csi/driver:v2.2.0-eks-a-26
       kubeProxy:
         arch:
         - amd64
@@ -3077,7 +3077,7 @@ spec:
         imageDigest: sha256:172caff0d99616c3c5fc38b8490f061bb8a1c4080ea45e07231e46a30c079209
         name: kube-rbac-proxy
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
       kubeVip:
         arch:
         - amd64
@@ -3086,7 +3086,7 @@ spec:
         imageDigest: sha256:48e9c1e6e1ae5a943cccf6def867c67f1b576fc191f4ac757cd007f345b0f4d0
         name: kube-vip
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kube-vip/kube-vip:v0.5.5-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kube-vip/kube-vip:v0.5.5-eks-a-26
       manager:
         arch:
         - amd64
@@ -3095,7 +3095,7 @@ spec:
         imageDigest: sha256:a4d8ab0ea1846af3ce85debbfdc200f6f685c19a2c2e5f6f6a22653347660a13
         name: cloud-provider-vsphere
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kubernetes/cloud-provider-vsphere/cpi/manager:v1.24.1-eks-d-1-24-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kubernetes/cloud-provider-vsphere/cpi/manager:v1.24.1-eks-d-1-24-eks-a-26
       metadata:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api-provider-vsphere/manifests/infrastructure-vsphere/v1.3.1/metadata.yaml
       syncer:
@@ -3106,7 +3106,7 @@ spec:
         imageDigest: sha256:e252b76321c5404e5396acf90722758411ef31912ed0f37b5dfb6bfe9e195b60
         name: vsphere-csi-syncer
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kubernetes-sigs/vsphere-csi-driver/csi/syncer:v2.2.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kubernetes-sigs/vsphere-csi-driver/csi/syncer:v2.2.0-eks-a-26
       version: v1.3.1+37e93a5
   - bootstrap:
       components:
@@ -3119,7 +3119,7 @@ spec:
         imageDigest: sha256:bf189966564988af80655c2f2eb4acc7f880b465dedb5e9aacaa5b569a87466e
         name: kubeadm-bootstrap-controller
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kubernetes-sigs/cluster-api/kubeadm-bootstrap-controller:v1.2.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kubernetes-sigs/cluster-api/kubeadm-bootstrap-controller:v1.2.0-eks-a-26
       kubeProxy:
         arch:
         - amd64
@@ -3128,7 +3128,7 @@ spec:
         imageDigest: sha256:172caff0d99616c3c5fc38b8490f061bb8a1c4080ea45e07231e46a30c079209
         name: kube-rbac-proxy
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
       metadata:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api/manifests/bootstrap-kubeadm/v1.2.0/metadata.yaml
       version: v1.2.0+99a3807
@@ -3140,7 +3140,7 @@ spec:
         imageDigest: sha256:bf56c9712189f5fc65d35544e2a84d3a7a1a2c05f2840fab54c57e8a3f8b57a4
         name: bottlerocket-admin
         os: linux
-        uri: 10.136.0.2:443/bottlerocket/bottlerocket-admin:v0.9.2
+        uri: public.ecr.aws/bottlerocket/bottlerocket-admin:v0.9.2
       control:
         arch:
         - amd64
@@ -3148,7 +3148,7 @@ spec:
         imageDigest: sha256:a8f8f30ed6bd3f4848cf79d19f6c31d60b9c898649e7ee1d3081dac4a36421a7
         name: bottlerocket-control
         os: linux
-        uri: 10.136.0.2:443/bottlerocket/bottlerocket-control:v0.6.3
+        uri: public.ecr.aws/bottlerocket/bottlerocket-control:v0.6.3
       kubeadmBootstrap:
         arch:
         - amd64
@@ -3157,7 +3157,7 @@ spec:
         imageDigest: sha256:744ace102648399d351c955dbf13860cafee92104893f8a0ea8748e40f4c1622
         name: bottlerocket-bootstrap
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/bottlerocket-bootstrap:v1-25-2-eks-a-26
+        uri: 10.136.0.2:5000/eks-anywhere/bottlerocket-bootstrap:v1-25-2-eks-a-26
     certManager:
       acmesolver:
         arch:
@@ -3167,7 +3167,7 @@ spec:
         imageDigest: sha256:9297f8d98a49ad7b53e49923e84b32adb335268b6c45bbd61d9f8f286f7245b4
         name: cert-manager-acmesolver
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/cert-manager/cert-manager-acmesolver:v1.9.1-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/cert-manager/cert-manager-acmesolver:v1.9.1-eks-a-26
       cainjector:
         arch:
         - amd64
@@ -3176,7 +3176,7 @@ spec:
         imageDigest: sha256:29a4d7a3ea5a2c030f4448afe46b20acfce9314791dd681db8b09e99bae8fe89
         name: cert-manager-cainjector
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/cert-manager/cert-manager-cainjector:v1.9.1-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/cert-manager/cert-manager-cainjector:v1.9.1-eks-a-26
       controller:
         arch:
         - amd64
@@ -3185,7 +3185,7 @@ spec:
         imageDigest: sha256:b16b58ee27ea58e36cb49f7615824a2ef8f8c0aa3ed47ebc23d195113d9138dd
         name: cert-manager-controller
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/cert-manager/cert-manager-controller:v1.9.1-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/cert-manager/cert-manager-controller:v1.9.1-eks-a-26
       ctl:
         arch:
         - amd64
@@ -3194,7 +3194,7 @@ spec:
         imageDigest: sha256:fe7e77437832867a9c8c243aba8c9b8f2c33eccf1a798670fe8a449edc3dfe2e
         name: cert-manager-ctl
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/cert-manager/cert-manager-ctl:v1.9.1-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/cert-manager/cert-manager-ctl:v1.9.1-eks-a-26
       manifest:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cert-manager/manifests/v1.9.1/cert-manager.yaml
       version: v1.9.1+7bb5e2b
@@ -3206,7 +3206,7 @@ spec:
         imageDigest: sha256:9ece2181eedef5626f7d392f40e9914302868c1f5e5fa91276fdb1558be1c1d5
         name: cert-manager-webhook
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/cert-manager/cert-manager-webhook:v1.9.1-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/cert-manager/cert-manager-webhook:v1.9.1-eks-a-26
     cilium:
       cilium:
         arch:
@@ -3215,12 +3215,12 @@ spec:
         imageDigest: sha256:197b3706173bffc9563f7211788dfd326a36d1ac99d04c42357f80b7143da0d7
         name: cilium
         os: linux
-        uri: 10.136.0.2:443/isovalent/cilium:v1.11.10-eksa.2
+        uri: public.ecr.aws/isovalent/cilium:v1.11.10-eksa.2
       helmChart:
         description: Helm chart for cilium-chart
         imageDigest: sha256:252241c7986b52a4bec31c50e31daf349374b730dcb8aaa6db3a2b1cb025ff7c
         name: cilium-chart
-        uri: 10.136.0.2:443/isovalent/cilium:1.11.10-eksa.2
+        uri: public.ecr.aws/isovalent/cilium:1.11.10-eksa.2
       manifest:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cilium/manifests/cilium/v1.11.10-eksa.2/cilium.yaml
       operator:
@@ -3230,7 +3230,7 @@ spec:
         imageDigest: sha256:ec2677f33c9aa9b6a8f600314c718a913eb1f0d0006a991f69ee0a775bb29e14
         name: operator-generic
         os: linux
-        uri: 10.136.0.2:443/isovalent/operator-generic:v1.11.10-eksa.2
+        uri: public.ecr.aws/isovalent/operator-generic:v1.11.10-eksa.2
       version: v1.11.10-eksa.2
     cloudStack:
       clusterAPIController:
@@ -3241,7 +3241,7 @@ spec:
         imageDigest: sha256:1a31dd9c520d4081a039b275ed75b0a694632d6a83a6e8c3b0caf2e3a78086e2
         name: cluster-api-provider-cloudstack
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kubernetes-sigs/cluster-api-provider-cloudstack/release/manager:v0.4.9-rc4-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kubernetes-sigs/cluster-api-provider-cloudstack/release/manager:v0.4.9-rc4-eks-a-26
       components:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api-provider-cloudstack/manifests/infrastructure-cloudstack/v0.4.9-rc4/infrastructure-components.yaml
       kubeRbacProxy:
@@ -3252,7 +3252,7 @@ spec:
         imageDigest: sha256:172caff0d99616c3c5fc38b8490f061bb8a1c4080ea45e07231e46a30c079209
         name: kube-rbac-proxy
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
       kubeVip:
         arch:
         - amd64
@@ -3261,7 +3261,7 @@ spec:
         imageDigest: sha256:48e9c1e6e1ae5a943cccf6def867c67f1b576fc191f4ac757cd007f345b0f4d0
         name: kube-vip
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kube-vip/kube-vip:v0.5.5-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kube-vip/kube-vip:v0.5.5-eks-a-26
       metadata:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api-provider-cloudstack/manifests/infrastructure-cloudstack/v0.4.9-rc4/metadata.yaml
       version: v0.4.9-rc4+fec458f
@@ -3276,7 +3276,7 @@ spec:
         imageDigest: sha256:1d5d49d6653ca89275b36c3ee23c0c0e0ad908b9db70242d77ab549dd367fd3f
         name: cluster-api-controller
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kubernetes-sigs/cluster-api/cluster-api-controller:v1.2.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kubernetes-sigs/cluster-api/cluster-api-controller:v1.2.0-eks-a-26
       kubeProxy:
         arch:
         - amd64
@@ -3285,7 +3285,7 @@ spec:
         imageDigest: sha256:172caff0d99616c3c5fc38b8490f061bb8a1c4080ea45e07231e46a30c079209
         name: kube-rbac-proxy
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
       metadata:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api/manifests/cluster-api/v1.2.0/metadata.yaml
       version: v1.2.0+73969a7
@@ -3300,7 +3300,7 @@ spec:
         imageDigest: sha256:98744ce8a528ee59bea888a5cf27e197aec01022307596e367b8348bae7e34f7
         name: kubeadm-control-plane-controller
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kubernetes-sigs/cluster-api/kubeadm-control-plane-controller:v1.2.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kubernetes-sigs/cluster-api/kubeadm-control-plane-controller:v1.2.0-eks-a-26
       kubeProxy:
         arch:
         - amd64
@@ -3309,7 +3309,7 @@ spec:
         imageDigest: sha256:172caff0d99616c3c5fc38b8490f061bb8a1c4080ea45e07231e46a30c079209
         name: kube-rbac-proxy
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
       metadata:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api/manifests/control-plane-kubeadm/v1.2.0/metadata.yaml
       version: v1.2.0+5f68de4
@@ -3326,7 +3326,7 @@ spec:
         imageDigest: sha256:172caff0d99616c3c5fc38b8490f061bb8a1c4080ea45e07231e46a30c079209
         name: kube-rbac-proxy
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
       manager:
         arch:
         - amd64
@@ -3335,7 +3335,7 @@ spec:
         imageDigest: sha256:64b587d69a0863fdaedfe564d89d76a8e72157d1887d8246d1edaadb8e062b38
         name: cluster-api-provider-docker
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kubernetes-sigs/cluster-api/capd-manager:v1.2.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kubernetes-sigs/cluster-api/capd-manager:v1.2.0-eks-a-26
       metadata:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api/manifests/infrastructure-docker/v1.2.0/metadata.yaml
       version: v1.2.0+af7c54b
@@ -3378,7 +3378,7 @@ spec:
         imageDigest: sha256:7a98bf1836ea043a42982c31de90b15ac9cf1dfbfe06b394a67532e733db1704
         name: kind-node
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kubernetes-sigs/kind/node:v1.25.5-eks-d-1-25-2-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kubernetes-sigs/kind/node:v1.25.5-eks-d-1-25-2-eks-a-26
       kubeVersion: v1.25.5
       manifestUrl: https://distro.eks.amazonaws.com/kubernetes-1-25/kubernetes-1-25-eks-2.yaml
       name: kubernetes-1-25-eks-2
@@ -3395,7 +3395,7 @@ spec:
         imageDigest: sha256:a024605f429ae85c5b0751b3a7929824de7a99477e6134c99677fd614b387f65
         name: eks-anywhere-cli-tools
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/cli-tools:v0.14.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/cli-tools:v0.14.0-eks-a-26
       clusterController:
         arch:
         - amd64
@@ -3404,7 +3404,7 @@ spec:
         imageDigest: sha256:576c01d68bde60e9ada7bb56bbe2f0f64394c7aac8b2bbb686f974ef63911cf9
         name: eks-anywhere-cluster-controller
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/cluster-controller:v0.14.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/cluster-controller:v0.14.0-eks-a-26
       components:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/eks-anywhere/manifests/cluster-controller/v0.14.0/eksa-components.yaml
       diagnosticCollector:
@@ -3415,7 +3415,7 @@ spec:
         imageDigest: sha256:7bb784289bf9fe416b7fa9a58ef7f06d97ee0a18b94793aca5a188dee92e3a2f
         name: eks-anywhere-diagnostic-collector
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/diagnostic-collector:v0.14.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/diagnostic-collector:v0.14.0-eks-a-26
       version: v0.14.0+635e2f8
     etcdadmBootstrap:
       components:
@@ -3428,7 +3428,7 @@ spec:
         imageDigest: sha256:6077295d1a131aa4a96e94b90ed4cfea3e967244fb62daf7e5b10bda8b881aa0
         name: etcdadm-bootstrap-provider
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/aws/etcdadm-bootstrap-provider:v1.0.5-rc3-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/aws/etcdadm-bootstrap-provider:v1.0.5-rc3-eks-a-26
       kubeProxy:
         arch:
         - amd64
@@ -3437,7 +3437,7 @@ spec:
         imageDigest: sha256:172caff0d99616c3c5fc38b8490f061bb8a1c4080ea45e07231e46a30c079209
         name: kube-rbac-proxy
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
       metadata:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/etcdadm-bootstrap-provider/manifests/bootstrap-etcdadm-bootstrap/v1.0.5-rc3/metadata.yaml
       version: v1.0.5-rc3+e21737f
@@ -3452,7 +3452,7 @@ spec:
         imageDigest: sha256:c5a65c440d36085674c83305e0ac45879d68793ae81b8ceff85e8832e8193738
         name: etcdadm-controller
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/aws/etcdadm-controller:v1.0.4-rc4-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/aws/etcdadm-controller:v1.0.4-rc4-eks-a-26
       kubeProxy:
         arch:
         - amd64
@@ -3461,7 +3461,7 @@ spec:
         imageDigest: sha256:172caff0d99616c3c5fc38b8490f061bb8a1c4080ea45e07231e46a30c079209
         name: kube-rbac-proxy
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
       metadata:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/etcdadm-controller/manifests/bootstrap-etcdadm-controller/v1.0.4-rc4/metadata.yaml
       version: v1.0.4-rc4+425d719
@@ -3474,7 +3474,7 @@ spec:
         imageDigest: sha256:3e09a1c2bfc8d2ac95b610d53d96b0e6ed8aed2ddc8ebec4c06e8a5c632880ad
         name: helm-controller
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/fluxcd/helm-controller:v0.22.2-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/fluxcd/helm-controller:v0.22.2-eks-a-26
       kustomizeController:
         arch:
         - amd64
@@ -3483,7 +3483,7 @@ spec:
         imageDigest: sha256:efcf4b0dd083c450444172806c1ca606fbe3ad0bd57baaefd812d28fbb347c27
         name: kustomize-controller
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/fluxcd/kustomize-controller:v0.26.3-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/fluxcd/kustomize-controller:v0.26.3-eks-a-26
       notificationController:
         arch:
         - amd64
@@ -3492,7 +3492,7 @@ spec:
         imageDigest: sha256:448e4bfbf21b8b3d70cf6a61efee2839c364339b7514b56e542e2851789b5b82
         name: notification-controller
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/fluxcd/notification-controller:v0.24.1-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/fluxcd/notification-controller:v0.24.1-eks-a-26
       sourceController:
         arch:
         - amd64
@@ -3501,7 +3501,7 @@ spec:
         imageDigest: sha256:7fb054a18d0b84b31569293bb7042e693a90cae46f4397d67d4980f95eba5e9f
         name: source-controller
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/fluxcd/source-controller:v0.25.9-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/fluxcd/source-controller:v0.25.9-eks-a-26
       version: v0.31.3+9ff63c4
     haproxy:
       image:
@@ -3512,7 +3512,7 @@ spec:
         imageDigest: sha256:5d439a352a42cddd11e6b2c9f0a738f1d6dfd962340bd89ed21d4718ef4ac4a4
         name: haproxy
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kubernetes-sigs/kind/haproxy:v0.17.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kubernetes-sigs/kind/haproxy:v0.17.0-eks-a-26
     kindnetd:
       manifest:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/kind/manifests/kindnetd/v0.17.0/kindnetd.yaml
@@ -3527,7 +3527,7 @@ spec:
         imageDigest: sha256:3399c03825bd7ce2e90e480c2061cc361dc2afc3b00c1bd60a900ce5f47ec338
         name: cluster-api-provider-nutanix
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/nutanix-cloud-native/cluster-api-provider-nutanix:v1.1.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/nutanix-cloud-native/cluster-api-provider-nutanix:v1.1.0-eks-a-26
       clusterTemplate:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api-provider-nutanix/manifests/infrastructure-nutanix/v1.1.0/cluster-template.yaml
       components:
@@ -3540,7 +3540,7 @@ spec:
         imageDigest: sha256:48e9c1e6e1ae5a943cccf6def867c67f1b576fc191f4ac757cd007f345b0f4d0
         name: kube-vip
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kube-vip/kube-vip:v0.5.5-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kube-vip/kube-vip:v0.5.5-eks-a-26
       metadata:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api-provider-nutanix/manifests/infrastructure-nutanix/v1.1.0/metadata.yaml
       version: v1.1.0+28cafb5
@@ -3549,7 +3549,7 @@ spec:
         description: Helm chart for eks-anywhere-packages
         imageDigest: sha256:fb1794cae7960530f384704849d57631bd4e0df9869992046872c2dcb9ba43ef
         name: eks-anywhere-packages
-        uri: 10.136.0.2:443/eks-anywhere/eks-anywhere-packages:0.2.28-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/eks-anywhere-packages:0.2.28-eks-a-26
       packageController:
         arch:
         - amd64
@@ -3558,7 +3558,7 @@ spec:
         imageDigest: sha256:5ec8608552cdf7410a8a679901a12a9e59a643f461859640821520d8757725af
         name: eks-anywhere-packages
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/eks-anywhere-packages:v0.2.28-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/eks-anywhere-packages:v0.2.28-eks-a-26
       tokenRefresher:
         arch:
         - amd64
@@ -3567,7 +3567,7 @@ spec:
         imageDigest: sha256:08b696bb98f687e1081d487cf17c6bff4a47928bdacc4d9f341d49224601fcdd
         name: ecr-token-refresher
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/ecr-token-refresher:v0.2.28-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/ecr-token-refresher:v0.2.28-eks-a-26
       version: v0.2.28+657c319
     snow:
       bottlerocketBootstrapSnow:
@@ -3578,7 +3578,7 @@ spec:
         imageDigest: sha256:18c09fcb6c118d8b1f2be5ea605bfbb7ab2a9fe4fa0933b451be45c644489a7b
         name: bottlerocket-bootstrap-snow
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/bottlerocket-bootstrap-snow:v1-25-2-eks-a-26
+        uri: 10.136.0.2:5000/eks-anywhere/bottlerocket-bootstrap-snow:v1-25-2-eks-a-26
       components:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api-provider-aws-snow/manifests/infrastructure-snow/v0.1.21/infrastructure-components.yaml
       kubeVip:
@@ -3589,7 +3589,7 @@ spec:
         imageDigest: sha256:48e9c1e6e1ae5a943cccf6def867c67f1b576fc191f4ac757cd007f345b0f4d0
         name: kube-vip
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kube-vip/kube-vip:v0.5.5-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kube-vip/kube-vip:v0.5.5-eks-a-26
       manager:
         arch:
         - amd64
@@ -3598,7 +3598,7 @@ spec:
         imageDigest: sha256:2748b3427cf14a9bb5710fd946096c25b05ade5025512d03afd655a220ee55bf
         name: cluster-api-snow-controller
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/aws/cluster-api-provider-aws-snow/manager:v0.1.21-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/aws/cluster-api-provider-aws-snow/manager:v0.1.21-eks-a-26
       metadata:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api-provider-aws-snow/manifests/infrastructure-snow/v0.1.21/metadata.yaml
       version: v0.1.21+562578c
@@ -3611,7 +3611,7 @@ spec:
         imageDigest: sha256:e61ee865af4e2d4248f30929238ee80f4367f7a44ba4cff03fa362b103c6543c
         name: cluster-api-provider-tinkerbell
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/tinkerbell/cluster-api-provider-tinkerbell:9e9c2a397288908f73a4f499ac00aaf96d15deb6-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/tinkerbell/cluster-api-provider-tinkerbell:9e9c2a397288908f73a4f499ac00aaf96d15deb6-eks-a-26
       clusterTemplate:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api-provider-tinkerbell/manifests/infrastructure-tinkerbell/9e9c2a397288908f73a4f499ac00aaf96d15deb6/cluster-template.yaml
       components:
@@ -3624,7 +3624,7 @@ spec:
         imageDigest: sha256:bcdbf94785d7dd6b3fc6aad616672baba6e42c22286cd7b9cfbec0c4da81ea7c
         name: envoy
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/envoyproxy/envoy:v1.22.2.0-prod-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/envoyproxy/envoy:v1.22.2.0-prod-eks-a-26
       kubeVip:
         arch:
         - amd64
@@ -3633,7 +3633,7 @@ spec:
         imageDigest: sha256:48e9c1e6e1ae5a943cccf6def867c67f1b576fc191f4ac757cd007f345b0f4d0
         name: kube-vip
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kube-vip/kube-vip:v0.5.5-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kube-vip/kube-vip:v0.5.5-eks-a-26
       metadata:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api-provider-tinkerbell/manifests/infrastructure-tinkerbell/9e9c2a397288908f73a4f499ac00aaf96d15deb6/metadata.yaml
       tinkerbellStack:
@@ -3646,7 +3646,7 @@ spec:
             imageDigest: sha256:ec75a43a956793fd53b77723f464b69b9c4a27675dedd99fdb1ce74d74691c7d
             name: cexec
             os: linux
-            uri: 10.136.0.2:443/eks-anywhere/tinkerbell/hub/cexec:6c0f0d437bde2c836d90b000312c8b25fa1b65e1-eks-a-26
+            uri: public.ecr.aws/eks-anywhere/tinkerbell/hub/cexec:6c0f0d437bde2c836d90b000312c8b25fa1b65e1-eks-a-26
           imageToDisk:
             arch:
             - amd64
@@ -3655,7 +3655,7 @@ spec:
             imageDigest: sha256:73359e8afe20ec1d7316d09d45fe9a8cad67feb8b701869e63e4bf67f14f4695
             name: image2disk
             os: linux
-            uri: 10.136.0.2:443/eks-anywhere/tinkerbell/hub/image2disk:6c0f0d437bde2c836d90b000312c8b25fa1b65e1-eks-a-26
+            uri: public.ecr.aws/eks-anywhere/tinkerbell/hub/image2disk:6c0f0d437bde2c836d90b000312c8b25fa1b65e1-eks-a-26
           kexec:
             arch:
             - amd64
@@ -3664,7 +3664,7 @@ spec:
             imageDigest: sha256:dc67cfb29bdd05d47562c71a0bc4786897e704aea95a26ecd30eff9f9f7c2eeb
             name: kexec
             os: linux
-            uri: 10.136.0.2:443/eks-anywhere/tinkerbell/hub/kexec:6c0f0d437bde2c836d90b000312c8b25fa1b65e1-eks-a-26
+            uri: public.ecr.aws/eks-anywhere/tinkerbell/hub/kexec:6c0f0d437bde2c836d90b000312c8b25fa1b65e1-eks-a-26
           ociToDisk:
             arch:
             - amd64
@@ -3673,7 +3673,7 @@ spec:
             imageDigest: sha256:d301c4ce6622a55d8d36f0196d322c7d31c0bb04f9c3ec56d71b2ba99703ac3e
             name: oci2disk
             os: linux
-            uri: 10.136.0.2:443/eks-anywhere/tinkerbell/hub/oci2disk:6c0f0d437bde2c836d90b000312c8b25fa1b65e1-eks-a-26
+            uri: public.ecr.aws/eks-anywhere/tinkerbell/hub/oci2disk:6c0f0d437bde2c836d90b000312c8b25fa1b65e1-eks-a-26
           reboot:
             arch:
             - amd64
@@ -3682,7 +3682,7 @@ spec:
             imageDigest: sha256:f0387cc7dda122ca70045234d268a1e92eb7f5e4e862a38322bc5413aab68215
             name: reboot
             os: linux
-            uri: 10.136.0.2:443/eks-anywhere/tinkerbell/hub/reboot:6c0f0d437bde2c836d90b000312c8b25fa1b65e1-eks-a-26
+            uri: public.ecr.aws/eks-anywhere/tinkerbell/hub/reboot:6c0f0d437bde2c836d90b000312c8b25fa1b65e1-eks-a-26
           writeFile:
             arch:
             - amd64
@@ -3691,7 +3691,7 @@ spec:
             imageDigest: sha256:0002c7fca533ccc76538c7b982e555a12674e6f46017e01d3806a4bae643b2a3
             name: writefile
             os: linux
-            uri: 10.136.0.2:443/eks-anywhere/tinkerbell/hub/writefile:6c0f0d437bde2c836d90b000312c8b25fa1b65e1-eks-a-26
+            uri: public.ecr.aws/eks-anywhere/tinkerbell/hub/writefile:6c0f0d437bde2c836d90b000312c8b25fa1b65e1-eks-a-26
         boots:
           arch:
           - amd64
@@ -3700,7 +3700,7 @@ spec:
           imageDigest: sha256:d14b66d7ef18220872c629b4a21bbb69a5495c8c74755931b711e1dac572d589
           name: boots
           os: linux
-          uri: 10.136.0.2:443/eks-anywhere/tinkerbell/boots:79b1d9acb65dfd0527b44800eddbdcf6b751c8d8-eks-a-26
+          uri: public.ecr.aws/eks-anywhere/tinkerbell/boots:79b1d9acb65dfd0527b44800eddbdcf6b751c8d8-eks-a-26
         hegel:
           arch:
           - amd64
@@ -3709,7 +3709,7 @@ spec:
           imageDigest: sha256:997f3adab9ecac1151aec19a4785d51fedf3f26e629b9936b5e6f8d6aa605611
           name: hegel
           os: linux
-          uri: 10.136.0.2:443/eks-anywhere/tinkerbell/hegel:7b286fdc8e8fa91a6e9a179a5494b6ee29fce17b-eks-a-26
+          uri: public.ecr.aws/eks-anywhere/tinkerbell/hegel:7b286fdc8e8fa91a6e9a179a5494b6ee29fce17b-eks-a-26
         hook:
           bootkit:
             arch:
@@ -3719,7 +3719,7 @@ spec:
             imageDigest: sha256:a1ff9f60e05a76ddf16b5d55476f5a43935a1422423353362187f8a7a2a3e4d3
             name: hook-bootkit
             os: linux
-            uri: 10.136.0.2:443/eks-anywhere/tinkerbell/hook-bootkit:6d43b8b331c7a389f3ffeaa388fa9aa98248d7a2-eks-a-26
+            uri: public.ecr.aws/eks-anywhere/tinkerbell/hook-bootkit:6d43b8b331c7a389f3ffeaa388fa9aa98248d7a2-eks-a-26
           docker:
             arch:
             - amd64
@@ -3728,7 +3728,7 @@ spec:
             imageDigest: sha256:01bc24bed4532587110c6320ba8201063645ef8f2af519f4d07c6132f01c8923
             name: hook-docker
             os: linux
-            uri: 10.136.0.2:443/eks-anywhere/tinkerbell/hook-docker:6d43b8b331c7a389f3ffeaa388fa9aa98248d7a2-eks-a-26
+            uri: public.ecr.aws/eks-anywhere/tinkerbell/hook-docker:6d43b8b331c7a389f3ffeaa388fa9aa98248d7a2-eks-a-26
           initramfs:
             amd:
               description: Tinkerbell operating system installation environment (osie)
@@ -3748,7 +3748,7 @@ spec:
             imageDigest: sha256:0467274361bac7488d4191bcfa89736dbddb497e637cbdc4f214497b089f9827
             name: hook-kernel
             os: linux
-            uri: 10.136.0.2:443/eks-anywhere/tinkerbell/hook-kernel:6d43b8b331c7a389f3ffeaa388fa9aa98248d7a2-eks-a-26
+            uri: public.ecr.aws/eks-anywhere/tinkerbell/hook-kernel:6d43b8b331c7a389f3ffeaa388fa9aa98248d7a2-eks-a-26
           vmlinuz:
             amd:
               description: Tinkerbell operating system installation environment (osie)
@@ -3768,7 +3768,7 @@ spec:
           imageDigest: sha256:e7d7074164b3f88b35e343f7dbd973a55c6581d3d13c3d542ed2b66039ce0761
           name: rufio
           os: linux
-          uri: 10.136.0.2:443/eks-anywhere/tinkerbell/rufio:a4053e5c1e7f32fb5c0a9962846c219c3ef8aaf3-eks-a-26
+          uri: public.ecr.aws/eks-anywhere/tinkerbell/rufio:a4053e5c1e7f32fb5c0a9962846c219c3ef8aaf3-eks-a-26
         tink:
           tinkController:
             arch:
@@ -3778,7 +3778,7 @@ spec:
             imageDigest: sha256:3066b307aaf7c224d0fbd83a71b0ee0622860bdd2679cf87feb62d407b23d125
             name: tink-controller
             os: linux
-            uri: 10.136.0.2:443/eks-anywhere/tinkerbell/tink/tink-controller:19b68beab1a902846c10ee3422cafb4fd5c3307e-eks-a-26
+            uri: public.ecr.aws/eks-anywhere/tinkerbell/tink/tink-controller:19b68beab1a902846c10ee3422cafb4fd5c3307e-eks-a-26
           tinkServer:
             arch:
             - amd64
@@ -3787,7 +3787,7 @@ spec:
             imageDigest: sha256:dcc91a1e4c98b32eb144cf6b9703c9c30abd0f23b3b7e08e71440630b1ab0a3f
             name: tink-server
             os: linux
-            uri: 10.136.0.2:443/eks-anywhere/tinkerbell/tink/tink-server:19b68beab1a902846c10ee3422cafb4fd5c3307e-eks-a-26
+            uri: public.ecr.aws/eks-anywhere/tinkerbell/tink/tink-server:19b68beab1a902846c10ee3422cafb4fd5c3307e-eks-a-26
           tinkWorker:
             arch:
             - amd64
@@ -3796,12 +3796,12 @@ spec:
             imageDigest: sha256:368785248ccb27b87d01a7551b760558f8bb4f8f082a5c1be2233535c4600290
             name: tink-worker
             os: linux
-            uri: 10.136.0.2:443/eks-anywhere/tinkerbell/tink/tink-worker:19b68beab1a902846c10ee3422cafb4fd5c3307e-eks-a-26
+            uri: public.ecr.aws/eks-anywhere/tinkerbell/tink/tink-worker:19b68beab1a902846c10ee3422cafb4fd5c3307e-eks-a-26
         tinkerbellChart:
           description: Helm chart for tinkerbell-chart
           imageDigest: sha256:55709c26c4869e5099f0bac318f1f26d8da94083278e4e4dce6a844734506d3f
           name: tinkerbell-chart
-          uri: 10.136.0.2:443/eks-anywhere/tinkerbell/tinkerbell-chart:0.1.6-eks-a-26
+          uri: public.ecr.aws/eks-anywhere/tinkerbell/tinkerbell-chart:0.1.6-eks-a-26
       version: v0.1.0
     vSphere:
       clusterAPIController:
@@ -3812,7 +3812,7 @@ spec:
         imageDigest: sha256:24d151efd8c46e41608a9208e54f61708cfa7cc5e61e36a0417972213057fd99
         name: cluster-api-provider-vsphere
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kubernetes-sigs/cluster-api-provider-vsphere/release/manager:v1.3.1-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kubernetes-sigs/cluster-api-provider-vsphere/release/manager:v1.3.1-eks-a-26
       clusterTemplate:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api-provider-vsphere/manifests/infrastructure-vsphere/v1.3.1/cluster-template.yaml
       components:
@@ -3825,7 +3825,7 @@ spec:
         imageDigest: sha256:60b86d68b6701da0f20c1362d5bf7b81b1532cacfdf618dea2c45ea70f0585ec
         name: vsphere-csi-driver
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kubernetes-sigs/vsphere-csi-driver/csi/driver:v2.2.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kubernetes-sigs/vsphere-csi-driver/csi/driver:v2.2.0-eks-a-26
       kubeProxy:
         arch:
         - amd64
@@ -3834,7 +3834,7 @@ spec:
         imageDigest: sha256:172caff0d99616c3c5fc38b8490f061bb8a1c4080ea45e07231e46a30c079209
         name: kube-rbac-proxy
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/brancz/kube-rbac-proxy:v0.13.0-eks-a-26
       kubeVip:
         arch:
         - amd64
@@ -3843,7 +3843,7 @@ spec:
         imageDigest: sha256:48e9c1e6e1ae5a943cccf6def867c67f1b576fc191f4ac757cd007f345b0f4d0
         name: kube-vip
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kube-vip/kube-vip:v0.5.5-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kube-vip/kube-vip:v0.5.5-eks-a-26
       manager:
         arch:
         - amd64
@@ -3852,7 +3852,7 @@ spec:
         imageDigest: sha256:b0c3aa9aff46aa4c512e9f200ccdcc7c8cabb480f60bcf60d42e471f4c084eca
         name: cloud-provider-vsphere
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kubernetes/cloud-provider-vsphere/cpi/manager:v1.25.0-eks-d-1-25-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kubernetes/cloud-provider-vsphere/cpi/manager:v1.25.0-eks-d-1-25-eks-a-26
       metadata:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api-provider-vsphere/manifests/infrastructure-vsphere/v1.3.1/metadata.yaml
       syncer:
@@ -3863,6 +3863,6 @@ spec:
         imageDigest: sha256:e252b76321c5404e5396acf90722758411ef31912ed0f37b5dfb6bfe9e195b60
         name: vsphere-csi-syncer
         os: linux
-        uri: 10.136.0.2:443/eks-anywhere/kubernetes-sigs/vsphere-csi-driver/csi/syncer:v2.2.0-eks-a-26
+        uri: public.ecr.aws/eks-anywhere/kubernetes-sigs/vsphere-csi-driver/csi/syncer:v2.2.0-eks-a-26
       version: v1.3.1+ea23118
 status: {}
