@@ -57,7 +57,7 @@ spec:
         imageDigest: sha256:1036cb53d2892562a0f6352350a7daa833129f5a5e919ce08e2bf4d24f87a3ee
         name: bottlerocket-bootstrap
         os: linux
-        uri: 10.136.0.2:5000/eks-anywhere/bottlerocket-bootstrap:v1-21-24-eks-a-26
+        uri: 10.136.0.2:443/eks-anywhere/bottlerocket-bootstrap:v1-21-24-eks-a-26
     certManager:
       acmesolver:
         arch:
@@ -496,7 +496,7 @@ spec:
         imageDigest: sha256:f86370a2698a981587510fac2942a9d5b0fe5e8af45599e09900f4e7a43b9fff
         name: bottlerocket-bootstrap-snow
         os: linux
-        uri: 10.136.0.2:5000/eks-anywhere/bottlerocket-bootstrap-snow:v1-21-24-eks-a-26
+        uri: 10.136.0.2:443/eks-anywhere/bottlerocket-bootstrap-snow:v1-21-24-eks-a-26
       components:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api-provider-aws-snow/manifests/infrastructure-snow/v0.1.21/infrastructure-components.yaml
       kubeVip:
@@ -832,7 +832,7 @@ spec:
         imageDigest: sha256:0b86fe68ec5aad804e9facfff195347548bf95369248642cf522b432d1804f98
         name: bottlerocket-bootstrap
         os: linux
-        uri: 10.136.0.2:5000/eks-anywhere/bottlerocket-bootstrap:v1-22-17-eks-a-26
+        uri: 10.136.0.2:443/eks-anywhere/bottlerocket-bootstrap:v1-22-17-eks-a-26
     certManager:
       acmesolver:
         arch:
@@ -1271,7 +1271,7 @@ spec:
         imageDigest: sha256:b2d9f3947097a8e276b3dd89935c4ee7e899462a0e59ec5e5c9577bdfd896fda
         name: bottlerocket-bootstrap-snow
         os: linux
-        uri: 10.136.0.2:5000/eks-anywhere/bottlerocket-bootstrap-snow:v1-22-17-eks-a-26
+        uri: 10.136.0.2:443/eks-anywhere/bottlerocket-bootstrap-snow:v1-22-17-eks-a-26
       components:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api-provider-aws-snow/manifests/infrastructure-snow/v0.1.21/infrastructure-components.yaml
       kubeVip:
@@ -1607,7 +1607,7 @@ spec:
         imageDigest: sha256:93e7e17c3a12a4694769d9ebed77a4dfb56de5a050f43a54f6bdc73d0405538b
         name: bottlerocket-bootstrap
         os: linux
-        uri: 10.136.0.2:5000/eks-anywhere/bottlerocket-bootstrap:v1-23-12-eks-a-26
+        uri: 10.136.0.2:443/eks-anywhere/bottlerocket-bootstrap:v1-23-12-eks-a-26
     certManager:
       acmesolver:
         arch:
@@ -2046,7 +2046,7 @@ spec:
         imageDigest: sha256:a64aad66540f7d51068413c92bd9c351bb17399ec4a638ca599ec4a9018e74db
         name: bottlerocket-bootstrap-snow
         os: linux
-        uri: 10.136.0.2:5000/eks-anywhere/bottlerocket-bootstrap-snow:v1-23-12-eks-a-26
+        uri: 10.136.0.2:443/eks-anywhere/bottlerocket-bootstrap-snow:v1-23-12-eks-a-26
       components:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api-provider-aws-snow/manifests/infrastructure-snow/v0.1.21/infrastructure-components.yaml
       kubeVip:
@@ -2382,7 +2382,7 @@ spec:
         imageDigest: sha256:447e9d2cb972f818b193641dfdd7383ff23eabb6aa569fc7a1a8c6c886c8dd14
         name: bottlerocket-bootstrap
         os: linux
-        uri: 10.136.0.2:5000/eks-anywhere/bottlerocket-bootstrap:v1-24-7-eks-a-26
+        uri: 10.136.0.2:443/eks-anywhere/bottlerocket-bootstrap:v1-24-7-eks-a-26
     certManager:
       acmesolver:
         arch:
@@ -2821,7 +2821,7 @@ spec:
         imageDigest: sha256:78dbc49a0d26d37251f95db4aa423c9a546943ef88e12763c7a6e3345121b8f2
         name: bottlerocket-bootstrap-snow
         os: linux
-        uri: 10.136.0.2:5000/eks-anywhere/bottlerocket-bootstrap-snow:v1-24-7-eks-a-26
+        uri: 10.136.0.2:443/eks-anywhere/bottlerocket-bootstrap-snow:v1-24-7-eks-a-26
       components:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api-provider-aws-snow/manifests/infrastructure-snow/v0.1.21/infrastructure-components.yaml
       kubeVip:
@@ -3157,7 +3157,7 @@ spec:
         imageDigest: sha256:744ace102648399d351c955dbf13860cafee92104893f8a0ea8748e40f4c1622
         name: bottlerocket-bootstrap
         os: linux
-        uri: 10.136.0.2:5000/eks-anywhere/bottlerocket-bootstrap:v1-25-2-eks-a-26
+        uri: 10.136.0.2:443/eks-anywhere/bottlerocket-bootstrap:v1-25-2-eks-a-26
     certManager:
       acmesolver:
         arch:
@@ -3578,7 +3578,7 @@ spec:
         imageDigest: sha256:18c09fcb6c118d8b1f2be5ea605bfbb7ab2a9fe4fa0933b451be45c644489a7b
         name: bottlerocket-bootstrap-snow
         os: linux
-        uri: 10.136.0.2:5000/eks-anywhere/bottlerocket-bootstrap-snow:v1-25-2-eks-a-26
+        uri: 10.136.0.2:443/eks-anywhere/bottlerocket-bootstrap-snow:v1-25-2-eks-a-26
       components:
         uri: https://anywhere-assets.eks.amazonaws.com/releases/bundles/26/artifacts/cluster-api-provider-aws-snow/manifests/infrastructure-snow/v0.1.21/infrastructure-components.yaml
       kubeVip:
